@@ -53,6 +53,15 @@
     rail.addEventListener('scroll', prog, { passive: true }); window.addEventListener('resize', prog); prog();
   }
 
+  // Review cards tilt toward the cursor
+  document.querySelectorAll('.rv').forEach(function (card) {
+    card.addEventListener('mousemove', function (e) {
+      var r = card.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+      card.style.setProperty('--ry', (x * 8) + 'deg'); card.style.setProperty('--rx', (-y * 8) + 'deg');
+    });
+    card.addEventListener('mouseleave', function () { card.style.removeProperty('--rx'); card.style.removeProperty('--ry'); });
+  });
+
   // Count-ups for the site's own figures
   var counters = document.querySelectorAll('[data-count]');
   if ('IntersectionObserver' in window) {

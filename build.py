@@ -133,6 +133,42 @@ JOURNEYS = [
 ]
 JOURNEY_BY_SLUG = {j["slug"]: j for j in JOURNEYS}
 
+REVIEWS = [  # Google reviews supplied by the client, all five stars; text kept as given
+    ("Liz Cox", "Nov 2025", "Most amazing company, staff and care. The best medical help I’ve ever received. Couldn’t be more thankful of this group."),
+    ("Carol Greer", "Nov 2025", "Livewell passport is truly amazing. The care and support I received during my weight loss journey was incredible. Highly recommend!!! They truly…"),
+    ("Amy Hallisey", "Oct 2025", "I’ve been really happy with my experience so far. During my appointment with Fabry he took the time to really dive into my medical history and didn’t…"),
+    ("LaToya Quarles", "Jul 2025", "I started my journey in March 2025 since then I have went from 246 to my current 167! I have never felt more supported and heard at a doctors office…"),
+    ("Shannon Sadak", "Jun 2025", "I absolutely love Livewell Passport! Courtney and her staff have been lifechangers in my weightloss journey! I’m so blessed to have them in my corner!"),
+    ("Kathleen Morehead", "May 2025", "Livewell care has been an enormous help in navigating my health issues. They have provided me with guidance and support and excellent care. Thank you so…"),
+    ("Ashley Carroll", "May 2025", "I was having multiple hot flashes a day, tired all the time, waking up multiple times each night, and could not lose weight. Since starting HRT, I fe…"),
+    ("Evan Rodriguez", "Mar 2025", "The staff is amazing and always willing to work with my schedule. I’ve noticed such a great transformation in such a short time."),
+    ("Shanlle Moore", "Feb 2025", "Amazing staff. Easy to reach. Don’t forget that they are the best listeners to your needs. Give them a call."),
+    ("Krista Lakes", "Jan 2025", "Livewell Passport truly changed my life. After I had my daughter I couldn’t lose weight, I was doing everything and the scale wouldn’t move. I went to…"),
+    ("Wells Sydney", "Oct 2024", "Dr Fabry is the most thorough Dr I have ever had! 10/10 recommend for weight loss and overall primary care!"),
+    ("Karen Johnson", "Oct 2024", "My experience here has been amazing! Courtney and Amber are wonderful… knowledgeable, friendly, always ready to help. Dr. Fabry is always ready to an…"),
+    ("Angie Lilly", "Oct 2024", "The provider is absolutely fabulous. I have had great success in my weight loss journey!"),
+    ("Vicki B", "Sep 2024", "OMG! The people here are super awesome. Everyone here is friendly and helpful. I especially like the ambiance…"),
+    ("Quaney R’Ross", "May 2024", "Exceptionally great 👍🏾"),
+    ("Verlene Sims", "May 2024", "Next level healthcare of the future, I’m extremely optimistic."),
+    ("Megan Dean", "May 2024", "Everyone here is friendly and professional. They go above and beyond. The care is excellent."),
+    ("Jessica Lynn", "Apr 2024", "Dr. Jeremiah and his team have changed my life! They have helped diagnose problems with why I struggled for years to lose weight, even when dieting an…"),
+    ("Kacie Suhr", "Apr 2024", "Changed my life!!! Love love love everything about them! ❤️ Highly recommend!!!"),
+    ("Hydia Samuels", "Apr 2024", "I have been on Wegovy and working with Dr. Fabry for about three months now… I’VE LOST A TOTAL OF 51 POUNDS in 12 weeks!!!! I’ve always struggled with m…"),
+    ("Sommer Nazzaro", "Apr 2024", "Dr. Fabry is absolutely amazing!"),
+    ("Jen Ryan", "Apr 2024", "What a great experience! Dr. Fabry was amazing! I have never looked or felt this good in my life. My weight loss experience was fantastic and the heal…"),
+    ("Erika Vaden", "Dec 2023", "A great concept and pioneers in the future of personal medicine. The best staff and nicely decorated!!!"),
+    ("Maureen Huebler", "Nov 2023", "I received two PRP hair treatments from Delaney, I have been very pleased. Delaney is also very good at Botox."),
+    ("Chef David Dunlap", "Nov 2023", "Amazing service and incredible staff!!"),
+    ("Jessica Ballas", "Nov 2023", "Professional staff, beautiful facility, hands down best practice I have been to."),
+    ("Alison Radford", "Nov 2023", "Courtney is extremely helpful and knowledgeable. You can tell that she has my best interest at heart and wants to help me be healthy! I am so…"),
+    ("Karen Meyer", "Nov 2023", "Attentive, personal, confidential."),
+    ("Callie Nunnally", "Nov 2023", "I love Livewell Passport!! It’s easy, simple, and they truly care! I am thankful for this team of people who consistently work around my schedule and offe…"),
+    ("Kelley Eason-Wysocki", "Nov 2023", "I love working with Livewell staff! They are knowledgeable, responsive and efficient. I know I am in good hands working with them!"),
+    ("Megan Haase", "Nov 2023", "They go above and beyond for their patients and truly make sure you have the best experience!!"),
+    ("Pam Cooper", "Nov 2023", "They are very thorough in explanation to reasoning, and why. I feel very confident after a visit that my situation will be resolved."),
+    ("Tera Hicks", "Nov 2023", "Dr Fabry is an amazing Dr. I’ve never been to a medical office where they actually listen to your concerns and do everything in their power to help yo…"),
+]
+
 STORIES = [  # real patient video stories from the current site
     ("Dawn", "story-dawn.jpg", "6oOIo74N_ao"),
     ("Callie", "story-callie.jpg", "Nd_iQ8ZcuhY"),
@@ -328,6 +364,32 @@ def header(depth=0, current=""):
 </div>
 <main id="main">'''
 
+GOOGLE_G = '<svg class="g" viewBox="0 0 48 48" aria-label="Google"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>'
+STAR = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.7.8-4.9 4.6 1.3 6.6L12 17.3l-6 3.3 1.3-6.6L2.4 9.4l6.7-.8z"/></svg>'
+def stars(): return '<span class="stars" aria-label="5 out of 5 stars">' + STAR * 5 + '</span>'
+
+def reviews_section():
+    cols = ["#3181C0", "#2F7F5F", "#1F8F9A", "#4F9BD9", "#EA4335", "#FBBC05", "#34A853"]
+    def card(i, r):
+        name, date, text = r
+        initials = "".join(w[0] for w in name.replace("’", "").split()[:2]).upper()
+        return f'''<article class="rv" style="--c:{cols[i % len(cols)]}"><div class="who"><span class="av" aria-hidden="true">{initials}</span><div><b>{name}</b><span>{date}</span></div>{GOOGLE_G}</div>{stars()}<p>{text}</p><span class="verified"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 2.1 3.1-.5 1 3 2.9 1.3-.5 3.1 2.1 2.4-2.1 2.4.5 3.1-2.9 1.3-1 3-3.1-.5L12 22l-2.4-2.1-3.1.5-1-3-2.9-1.3.5-3.1L1 10.6l2.1-2.4-.5-3.1 2.9-1.3 1-3 3.1.5z M10.5 15.5l-3-3 1.4-1.4 1.6 1.6 4.6-4.6 1.4 1.4z"/></svg>Posted on Google</span></article>'''
+    half = (len(REVIEWS) + 1) // 2
+    row1 = "".join(card(i, r) for i, r in enumerate(REVIEWS[:half]))
+    row2 = "".join(card(i + half, r) for i, r in enumerate(REVIEWS[half:]))
+    return f'''<section class="pad-l reviews bg-silver textured" id="reviews">
+  <div class="wrap">
+    <div class="reviews-head" data-reveal>
+      <div class="gbadge">{GOOGLE_G}<div class="score"><span data-count="5.0">5.0</span>{stars()}</div><small>Google rating · all five stars</small></div>
+      <div><h2>Journeys worth sharing, in their words</h2><p class="lede">Real Google reviews from Livewell Passport patients in Midlothian and Inlet Beach.</p></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="marquee-wrap"><div class="marquee" style="--dur:110s">{row1}{row1}</div></div>
+    <div class="marquee-wrap"><div class="marquee rev" style="--dur:130s">{row2}{row2}</div></div>
+  </div>
+</section>'''
+
 def machine_svg():
     """A body composition analyzer, drawn and animated. No manufacturer marks."""
     keys = "".join(f'<circle cx="{118 + (i % 4) * 16}" cy="{196 + (i // 4) * 12}" r="3.2" fill="#D7DDE3"/>' for i in range(12))
@@ -453,7 +515,8 @@ def home():
 
     body = f'''
 <section class="hero">
-  <img src="assets/img/beach.jpg" alt="" fetchpriority="high">
+  <img src="assets/img/hero-poster.jpg" alt="" fetchpriority="high">
+  <video autoplay muted loop playsinline preload="metadata" poster="assets/img/hero-poster.jpg" aria-hidden="true"><source src="assets/video/hero.mp4" type="video/mp4"></video>
   <div class="hero-inner">
     <h1>Your healthcare journey, <em>reimagined.</em></h1>
     <p class="lede">Primary care covered by insurance, plus advanced therapies like peptides and bioidentical hormones. Whole-person medicine with time to listen.</p>
@@ -483,6 +546,8 @@ def home():
     <div class="value">{tile("stethoscope")}<div><strong>Time to listen</strong><span>Licensed providers and health coaches walk beside you.</span></div></div>
   </div>
 </section>
+
+{reviews_section()}
 
 <section class="pad-xl manifesto">
   <div class="wrap">
@@ -566,7 +631,7 @@ def home():
 
 <section class="pad-l bg-white">
   <div class="wrap" data-reveal>
-    <h2>Journeys worth sharing</h2>
+    <h2>Stories that move us</h2>
     <p class="lede" style="margin-bottom:3rem">Discover how others found healing, clarity, and lasting change.</p>
     <p class="quote">“The staff is amazing and always willing to work with my schedule. I’ve noticed such a great transformation in such a short time.”</p>
     <p class="quote-by">Evan Rodriguez</p>
