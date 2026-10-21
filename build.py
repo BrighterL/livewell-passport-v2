@@ -17,12 +17,10 @@ FB = "https://www.facebook.com/livewellpassport/"
 IG = "https://www.instagram.com/livewellpassport"
 FONTS = "https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..800;1,62..125,400..800&family=Figtree:wght@400;500;600&display=swap"
 
-LOCATIONS = [
-    dict(slug="midlothian", city="Midlothian", state="Virginia", st="VA",
-         address="13553 Midlothian Tpke", city_line="Midlothian, VA 23113", phone="(804) 404-7902", tel="+18044047902"),
-    dict(slug="inlet-beach", city="Inlet Beach", state="Florida", st="FL",
-         address="22606 Panama City Beach Pkwy", city_line="Inlet Beach, FL 32413", phone="(850) 608-0200", tel="+18506080200"),
-]
+OFFICE = dict(slug="midlothian", city="Midlothian", state="Virginia", st="VA",
+              address="13553 Midlothian Tpke", city_line="Midlothian, VA 23113", phone="(804) 404-7902", tel="+18044047902")
+LOCATIONS = [OFFICE]
+STATES = ["Virginia", "Florida"]
 
 JOURNEYS = [
     dict(slug="weight-optimization", name="Weight Optimization", short="Weight", img="weight.jpg", icon="scale",
@@ -181,7 +179,7 @@ GENERAL_FAQ = [
     ("Are you primary care, and can I use you for all my healthcare needs?", "Yes. Livewell Passport blends primary care with wellness. We can serve as your primary care provider while also offering advanced therapies, hormone optimization, weight management and more."),
     ("Do you take insurance, and what costs are involved?", "Yes. Many of our primary care services are covered by insurance. Some wellness services, advanced therapies or specialized programs may be self-pay. We review pricing upfront, so there are no surprises."),
     ("Do you offer in-person or virtual appointments?", "Both. Our locations are here for face-to-face visits, and our secure telehealth platform makes it easy to connect from anywhere, which suits frequent travelers and busy schedules."),
-    ("Where are you located, and do you see sick patients?", "We have locations in Midlothian, Virginia and Inlet Beach, Florida, with new destinations opening soon. We see sick patients for many common concerns, but we are not an urgent care center. If you’re unsure whether to visit us or an ER, our team can help you decide."),
+    ("Where are you located, and do you see sick patients?", "Our in-person office is in Midlothian, Virginia, and we care for patients across Virginia and Florida by secure telehealth. We see sick patients for many common concerns, but we are not an urgent care center. If you’re unsure whether to visit us or an ER, our team can help you decide."),
     ("What is functional medicine?", "A patient-centered approach that looks deeper than symptoms to find the root causes of illness. It combines advanced diagnostic testing with personalized lifestyle, nutrition and medical interventions for lasting wellness, not quick fixes."),
     ("What is a health coach, and how can they help me?", "A health coach is your personal guide toward better health. They help you set goals, stay motivated and make sustainable changes to nutrition, stress and routines. Our health coaches work closely with your medical provider to keep your plan on course."),
     ("Do you handle men’s health and women’s health, including hormones?", "Yes. We offer comprehensive care for both, including hormone optimization, support for perimenopause and menopause, and treatment plans for low testosterone or energy imbalances."),
@@ -219,6 +217,7 @@ ICONS = {
     "menu": '<path d="M4 7h16M4 12h16M4 17h16"/>',
     "check": '<path d="M5 12l4 4L19 7"/>',
     "close": '<path d="M6 6l12 12M18 6L6 18"/>',
+    "videocamera-small": '<rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3"/>',
     "arrow-left": '<path d="M19 12H5M11 6l-6 6 6 6"/>',
     "spark": '<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" fill="currentColor" stroke="none"/>',
     "facebook": '<path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/>',
@@ -261,7 +260,7 @@ def rel(depth):  # path prefix for pages in subfolders
 
 def head(title, desc, depth=0, canonical_path=""):
     r = rel(depth)
-    full = f"{title} · {SITE}" if title != SITE else f"{SITE} · Primary care and functional medicine in Midlothian, VA and Inlet Beach, FL"
+    full = f"{title} · {SITE}" if title != SITE else f"{SITE} · Primary care and functional medicine in Midlothian, VA, serving Virginia and Florida"
     return f'''<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{html.escape(full)}</title>
@@ -280,7 +279,7 @@ def head(title, desc, depth=0, canonical_path=""):
 def footer(depth=0):
     r = rel(depth)
     jl = "".join(f'<li><a href="{r}journeys/{j["slug"]}.html">{j["name"]}</a></li>' for j in JOURNEYS)
-    ll = "".join(f'<li><a href="{r}locations.html#{l["slug"]}">{l["city"]}, {l["st"]}</a></li>' for l in LOCATIONS)
+    ll = f'<li><a href="{r}locations.html#midlothian">Midlothian, VA office</a></li><li><a href="{r}index.html#telehealth">Telehealth · Virginia &amp; Florida</a></li>'
     return f'''</main>
 <footer class="footer">
   <div class="wrap">
@@ -291,7 +290,7 @@ def footer(depth=0):
         <p><a href="mailto:{EMAIL}">{EMAIL}</a></p>
       </div>
       <div><h4>Journeys</h4><ul>{jl}</ul></div>
-      <div><h4>Locations</h4><ul>{ll}<li><a href="{r}contact.html">Start your journey</a></li><li><a href="{PORTAL_URL}" target="_blank" rel="noopener">Practice portal</a></li></ul></div>
+      <div><h4>Visit us</h4><ul>{ll}<li><a href="{r}contact.html">Start your journey</a></li><li><a href="{PORTAL_URL}" target="_blank" rel="noopener">Practice portal</a></li></ul></div>
       <div><h4>More</h4><ul>
         <li><a href="{r}faqs.html">FAQs</a></li>
         <li><a href="{r}policies.html">Cancellation &amp; billing policy</a></li>
@@ -316,12 +315,12 @@ def page(body, title, desc, depth=0, current=""):
 
 def header(depth=0, current=""):
     r = rel(depth)
-    strip_items = ["Primary care covered by insurance", "Midlothian, VA", "Inlet Beach, FL", "Telehealth", "Peptide therapy", "Bioidentical hormone replacement", "Weight optimization", "Hormone optimization"]
+    strip_items = ["Primary care covered by insurance", "Midlothian, VA office", "Serving Virginia & Florida", "Telehealth", "Peptide therapy", "Bioidentical hormone replacement", "Weight optimization", "Hormone optimization"]
     strip = "".join(f'<span>{t}{icon("spark")}</span>' for t in strip_items)
     on_hero = ' on-hero' if current == 'home' else ''
     def cur(key): return ' aria-current="page"' if current == key else ""
     jitems = "".join(f'<li data-i style="--i:{i+1}"><a href="{r}journeys/{j["slug"]}.html" data-img="{r}assets/img/{j["img"]}" data-cap="{j["name"]}"{cur(j["slug"])}>{tile(j["icon"])}<span>{j["name"]}<small>{j["blurb"]}</small></span>{icon("arrow", "icon arr")}</a></li>' for i, j in enumerate(JOURNEYS))
-    locs = "".join(f'<div class="mega-loc"><strong>{l["city"]}, {l["st"]}</strong><address>{l["address"]}<br>{l["city_line"]}</address><a href="tel:{l["tel"]}">{l["phone"]}</a></div>' for l in LOCATIONS)
+    locs = f'<div class="mega-loc"><strong>Midlothian, VA office</strong><address>{OFFICE["address"]}<br>{OFFICE["city_line"]}</address><a href="tel:{OFFICE["tel"]}">{OFFICE["phone"]}</a></div><div class="mega-loc"><strong>Telehealth</strong><address>Secure video visits across<br>Virginia and Florida</address><a href="{r}index.html#telehealth">How it works</a></div>'
     return f'''<a class="skip" href="#main">Skip to content</a>
 <div class="ticker" aria-hidden="true"><div class="ticker-track">{strip}{strip}</div></div>
 <header class="header{on_hero}">
@@ -330,7 +329,7 @@ def header(depth=0, current=""):
       <a class="brand" href="{r}index.html"><img src="{r}assets/img/stamp-logo.png" alt="" width="44" height="44"><span>Livewell Passport<small>Medical · Wellness · Weight loss · Nutrition</small></span></a>
       <ul class="nav-links">
         <li><button type="button" data-menu aria-expanded="false" aria-controls="mega">Journeys {icon("chev")}</button></li>
-        <li><a href="{r}locations.html"{cur("locations")}>Locations</a></li>
+        <li><a href="{r}locations.html"{cur("locations")}>Visit us</a></li>
         <li><a href="{r}faqs.html"{cur("faqs")}>FAQs</a></li>
         <li><a href="{r}portal.html"{cur("portal")}>Patient portal</a></li>
       </ul>
@@ -355,7 +354,7 @@ def header(depth=0, current=""):
       {stamp("LIVEWELL · PASSPORT", "MEDICAL · WELLNESS", "", cls="spin")}
     </div>
     <div class="mega-side">
-      <div data-i style="--i:3"><p class="label">Locations</p>{locs}</div>
+      <div data-i style="--i:3"><p class="label">Visit us</p>{locs}</div>
       <div data-i style="--i:5"><p class="label">More</p><ul class="mega-links">
         <li><a href="{r}portal.html">Patient portal</a></li><li><a href="{r}index.html#technology">Body composition analysis</a></li><li><a href="{r}faqs.html">FAQs</a></li><li><a href="{r}contact.html">Contact us</a></li><li><a href="mailto:{EMAIL}">{EMAIL}</a></li></ul></div>
       <div class="mega-social" data-i style="--i:7"><a href="{FB}" target="_blank" rel="noopener" aria-label="Facebook">{icon("facebook")}</a><a href="{IG}" target="_blank" rel="noopener" aria-label="Instagram">{icon("instagram")}</a></div>
@@ -381,7 +380,7 @@ def reviews_section():
   <div class="wrap">
     <div class="reviews-head" data-reveal>
       <div class="gbadge">{GOOGLE_G}<div class="score"><span data-count="5.0">5.0</span>{stars()}</div><small>Google rating · all five stars</small></div>
-      <div><h2>Journeys worth sharing, in their words</h2><p class="lede">Real Google reviews from Livewell Passport patients in Midlothian and Inlet Beach.</p></div>
+      <div><h2>Journeys worth sharing, in their words</h2><p class="lede">Real Google reviews from Livewell Passport patients across Virginia and Florida.</p></div>
     </div>
   </div>
   <div class="wrap">
@@ -464,6 +463,62 @@ def phone_mock():
   </div>
 </div><p class="phone-caption">Sample report. Your numbers are yours alone.</p></div>'''
 
+def telehealth_section():
+    return f'''<section class="pad-xl bg-white telehealth" id="telehealth">
+  <div class="wrap">
+    <div class="tele-head" data-reveal>
+      <div><h2>Your provider, wherever you are</h2><p class="lede">We offer both in-person and virtual appointments. Our secure telehealth platform makes it easy to connect from anywhere in Virginia or Florida, perfect for frequent travelers or busy schedules.</p></div>
+      <div class="state-toggle" role="group" aria-label="Choose your state">
+        <button type="button" class="on" data-state="Virginia">Virginia</button>
+        <button type="button" data-state="Florida">Florida</button>
+      </div>
+    </div>
+    <div class="tele">
+      <div class="tele-device" data-reveal>
+        <div class="call" data-step="1">
+          <div class="call-top"><span class="dot live"></span><span class="call-title">Livewell Passport · <b data-state-name>Virginia</b></span><span class="lock">{sol("shield-check")}Secure</span></div>
+          <div class="call-stage">
+            <div class="screen s1">
+              <div class="cal"><div class="cal-head"><b>Book your first stop</b><span>Telehealth</span></div>
+                <div class="cal-grid">{"".join(f'<span class="{"pick" if d == 17 else ("off" if d in (3, 4, 10, 11, 18, 25) else "")}">{d}</span>' for d in range(1, 29))}</div>
+                <div class="slots"><span>9:30</span><span class="pick">11:15</span><span>2:00</span><span>4:45</span></div>
+                <div class="cal-cta">Confirm visit</div></div>
+            </div>
+            <div class="screen s2">
+              <div class="tile provider"><img src="assets/img/stamp-logo.png" alt=""><span class="name">Your provider</span><span class="wave"><i></i><i></i><i></i><i></i><i></i></span></div>
+              <div class="tile patient"><img src="assets/img/mental.jpg" alt=""><span class="name">You · <em data-state-name>Virginia</em></span></div>
+              <div class="controls"><span></span><span></span><span class="end"></span></div>
+              <span class="timer" data-timer>00:00</span>
+            </div>
+            <div class="screen s3">
+              <div class="msgs">
+                <div class="msg in">Great to see you today. Your plan is in the portal, and your labs are ordered.</div>
+                <div class="msg out">Thank you! When should I schedule the follow-up?</div>
+                <div class="msg in">Let’s check in by video in four weeks. I’ll send the link.</div>
+                <div class="msg typing"><i></i><i></i><i></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="steps" role="tablist" aria-label="How telehealth works">
+          <button type="button" role="tab" class="on" data-go="1"><b>1</b><span>Book your first stop</span><small>Pick a time that fits your day.</small></button>
+          <button type="button" role="tab" data-go="2"><b>2</b><span>Connect from anywhere</span><small>Secure video with your provider.</small></button>
+          <button type="button" role="tab" data-go="3"><b>3</b><span>Follow your route</span><small>Plan, labs and follow-ups in the portal.</small></button>
+        </div>
+      </div>
+      <div class="tele-copy" data-reveal>
+        <p class="tele-state"><span data-state-line>Seeing patients across Virginia, in person in Midlothian or by secure video.</span></p>
+        <ul class="facts">
+          <li>{tile("videocamera", "", "blue")}<div><strong>In person or virtual</strong><span>Both are available. Choose the kind of visit that fits your life, and switch when it changes.</span></div></li>
+          <li>{tile("map-point", "", "green")}<div><strong>One main office</strong><span>{OFFICE["address"]}, {OFFICE["city_line"]} · {OFFICE["phone"]}</span></div></li>
+          <li>{tile("shield-check", "", "teal")}<div><strong>Private and protected</strong><span>We guard your health data with the same care we give your wellness, securely and confidentially.</span></div></li>
+        </ul>
+        <div class="hero-actions" style="justify-content:flex-start;margin-top:1.5rem"><a class="btn btn-primary" href="contact.html">Start your journey {icon("arrow")}</a></div>
+      </div>
+    </div>
+  </div>
+</section>'''
+
 def tech_section():
     return f'''<section class="pad-l bg-silver textured" id="technology">
   <div class="wrap">
@@ -491,7 +546,7 @@ def closing(depth=0, h="Your passport to wellness awaits."):
     return f'''<section class="pad-xl bg-dark closing">
   <div class="wrap" data-reveal>
     <h2>{h}</h2>
-    <p class="lede">Book your first visit in Midlothian, Inlet Beach or by telehealth. We always review pricing upfront, so there are no surprises.</p>
+    <p class="lede">Book your first visit in Midlothian or by secure telehealth anywhere in Virginia and Florida. We always review pricing upfront, so there are no surprises.</p>
     <div class="hero-actions"><a class="btn btn-light btn-lg" href="{r}contact.html">Start your journey {icon("arrow")}</a><a class="btn btn-secondary btn-lg" href="{r}faqs.html">Read the FAQs</a></div>
     <p class="contact-line">Questions first? Email <a href="mailto:{EMAIL}">{EMAIL}</a></p>
   </div>
@@ -506,13 +561,18 @@ def home():
     stories = "".join(f'''<a class="story" href="https://www.youtube.com/watch?v={vid}" target="_blank" rel="noopener">
       <div class="ph"><img src="assets/img/{img}" alt="{name}, a Livewell Passport patient" loading="lazy"><span class="play">{icon("play")}</span></div>
       <div class="meta"><strong>{name}’s story</strong><span>Watch on YouTube</span></div></a>''' for name, img, vid in STORIES)
-    locs = "".join(f'''<div class="loc" id="{l["slug"]}">
-      {stamp("ENTRY · " + l["st"], "LIVEWELL · PASSPORT", "OPEN", cls="entry-stamp")}
-      <h3>{l["city"]}<small>{l["state"]}</small></h3>
-      <address>{l["address"]}<br>{l["city_line"]}</address>
-      <div class="row"><a href="tel:{l["tel"]}">{icon("phone")}{l["phone"]}</a><a href="https://www.google.com/maps/search/?api=1&query={html.escape((l["address"] + ", " + l["city_line"]).replace(" ", "+"))}" target="_blank" rel="noopener">{icon("pin")}Directions</a></div>
-    </div>''' for l in LOCATIONS)
-
+    locs = f'''<div class="loc" id="midlothian">
+      {stamp("MAIN · OFFICE", "LIVEWELL · PASSPORT", "VA", cls="entry-stamp")}
+      <h3>{OFFICE["city"]}<small>In-person office · Virginia</small></h3>
+      <address>{OFFICE["address"]}<br>{OFFICE["city_line"]}</address>
+      <div class="row"><a href="tel:{OFFICE["tel"]}">{icon("phone")}{OFFICE["phone"]}</a><a href="https://www.google.com/maps/search/?api=1&query={html.escape((OFFICE["address"] + ", " + OFFICE["city_line"]).replace(" ", "+"))}" target="_blank" rel="noopener">{icon("pin")}Directions</a></div>
+    </div>
+    <div class="loc virtual" id="telehealth-card">
+      {stamp("TELEHEALTH", "LIVEWELL · PASSPORT", "VA · FL", cls="entry-stamp")}
+      <h3>Telehealth<small>Secure video visits · Virginia &amp; Florida</small></h3>
+      <address>Connect from anywhere in either state.<br>Perfect for frequent travelers or busy schedules.</address>
+      <div class="row"><a href="#telehealth">{icon("videocamera-small")}How it works</a><a href="contact.html">{icon("arrow")}Start your journey</a></div>
+    </div>'''
     body = f'''
 <section class="hero">
   <img src="assets/img/hero-poster.jpg" alt="" fetchpriority="high">
@@ -526,7 +586,7 @@ def home():
     <div class="passport-head"><strong>WELLNESS PASSPORT</strong><img src="assets/img/stamp-logo.png" alt=""></div>
     <dl>
       <dt>Holder</dt><dd>You</dd>
-      <dt>Issued at</dt><dd>Midlothian, VA · Inlet Beach, FL</dd>
+      <dt>Issued at</dt><dd>Midlothian, VA · Serving VA &amp; FL</dd>
       <dt>Covers</dt><dd>Primary care · Functional medicine · Advanced therapies</dd>
     </dl>
     <div class="stamps">
@@ -640,15 +700,17 @@ def home():
   </div>
 </section>
 
+{telehealth_section()}
+
 <section class="pad-xl textured">
   <div class="wrap map-wrap" data-reveal>
     <div class="usmap"><img src="assets/img/us-map.png" alt="Map of the United States" loading="lazy">
-      <span class="pin" style="left:80%;top:46%"><i></i><b>Midlothian, VA</b></span>
-      <span class="pin" style="left:79%;top:84%"><i></i><b>Inlet Beach, FL</b></span>
+      <span class="pin" style="left:80%;top:46%"><i></i><b>Midlothian office</b></span>
+      <span class="pin tele" style="left:79%;top:84%"><i></i><b>Florida · telehealth</b></span>
     </div>
     <div>
-      <h2>Your journey begins here</h2>
-      <p class="lede">Multiple locations. One mission: your lasting wellness. New destinations are opening in the near future.</p>
+      <h2>One company, two states</h2>
+      <p class="lede">One mission: your lasting wellness. Visit us in Midlothian, Virginia, or connect by secure telehealth from anywhere in Virginia or Florida.</p>
       <div class="locs">{locs}</div>
     </div>
   </div>
@@ -661,7 +723,7 @@ def home():
   </div>
 </section>
 {closing()}'''
-    return page(body, SITE, "Primary care covered by insurance, root-cause lab work and advanced therapies like peptides and hormone optimization. Midlothian, VA and Inlet Beach, FL.", 0, "home")
+    return page(body, SITE, "Primary care covered by insurance, root-cause lab work and advanced therapies like peptides and hormone optimization. Midlothian, VA, serving Virginia and Florida.", 0, "home")
 
 def journey(j):
     others = "".join(f'<a class="chip" href="{o["slug"]}.html">{o["name"]}</a>' for o in JOURNEYS if o is not j)
@@ -701,33 +763,40 @@ def faq_block(items, cls=""):
 # ---------------------------------------------------------------- journey pages
 # ---------------------------------------------------------------- other pages
 def locations_page():
-    locs = "".join(f'''<div class="loc" id="{l["slug"]}">
-      {stamp("ENTRY · " + l["st"], "LIVEWELL · PASSPORT", "OPEN", cls="entry-stamp")}
-      <h3>{l["city"]}<small>{l["state"]}</small></h3>
-      <address>{l["address"]}<br>{l["city_line"]}</address>
-      <div class="row"><a href="tel:{l["tel"]}">{icon("phone")}{l["phone"]}</a><a href="https://www.google.com/maps/search/?api=1&query={html.escape((l["address"] + ", " + l["city_line"]).replace(" ", "+"))}" target="_blank" rel="noopener">{icon("pin")}Directions</a><a href="mailto:{EMAIL}">{icon("mail")}Email</a></div>
-      <p class="muted" style="margin:0">Primary care, hormone optimization, weight management, peptides and more. Same-day appointments may be available for physicals.</p>
-    </div>''' for l in LOCATIONS)
     body = f'''
 <section class="page-hero pad-m textured"><div class="wrap">
-  <div class="crumbs"><a href="index.html">Home</a>{icon("chev")}<span>Locations</span></div>
-  <h1>Where to find us</h1>
-  <p class="lede">Physical locations in Midlothian, Virginia and Inlet Beach, Florida, with new destinations opening in the near future. Our secure telehealth platform makes it easy to connect from anywhere.</p>
-  <div class="locations">{locs}</div>
+  <div class="crumbs"><a href="index.html">Home</a>{icon("chev")}<span>Visit us</span></div>
+  <h1>One company, two states</h1>
+  <p class="lede">Our in-person office is in Midlothian, Virginia. Patients across Virginia and Florida can also connect by secure telehealth, which makes it easy to keep care on course from anywhere.</p>
+  <div class="locations">
+    <div class="loc" id="midlothian">
+      {stamp("MAIN · OFFICE", "LIVEWELL · PASSPORT", "VA", cls="entry-stamp")}
+      <h3>{OFFICE["city"]}<small>In-person office · Virginia</small></h3>
+      <address>{OFFICE["address"]}<br>{OFFICE["city_line"]}</address>
+      <div class="row"><a href="tel:{OFFICE["tel"]}">{icon("phone")}{OFFICE["phone"]}</a><a href="https://www.google.com/maps/search/?api=1&query={html.escape((OFFICE["address"] + ", " + OFFICE["city_line"]).replace(" ", "+"))}" target="_blank" rel="noopener">{icon("pin")}Directions</a><a href="mailto:{EMAIL}">{icon("mail")}Email</a></div>
+      <p class="muted" style="margin:0">Primary care, hormone optimization, weight management, peptides and more. Same-day appointments may be available for physicals.</p>
+    </div>
+    <div class="loc virtual" id="telehealth">
+      {stamp("TELEHEALTH", "LIVEWELL · PASSPORT", "VA · FL", cls="entry-stamp")}
+      <h3>Telehealth<small>Secure video visits · Virginia &amp; Florida</small></h3>
+      <address>Connect from anywhere in either state.<br>Perfect for frequent travelers or busy schedules.</address>
+      <div class="row"><a href="index.html#telehealth">{icon("videocamera-small")}How it works</a><a href="contact.html">{icon("arrow")}Start your journey</a></div>
+    </div>
+  </div>
 </div></section>
 <section class="pad-l bg-white"><div class="wrap split" data-reveal>
-  <div><h2>Not sure which stop is right?</h2><p class="measure muted">We see sick patients for many common concerns, but we are not an urgent care center. If you’re unsure whether to visit us or an ER or urgent care, our team can help you decide.</p>
+  <div><h2>Not sure which kind of visit is right?</h2><p class="measure muted">We offer both. Our office is here for face-to-face visits, and our secure telehealth platform makes it easy to connect from anywhere. We see sick patients for many common concerns, but we are not an urgent care center. If you’re unsure whether to visit us or an ER or urgent care, our team can help you decide.</p>
   <div class="hero-actions" style="justify-content:flex-start"><a class="btn btn-primary" href="contact.html">Start your journey {icon("arrow")}</a></div></div>
   <div class="photo wide"><img src="assets/img/beach.jpg" alt="A couple sitting on the sand at sunset beneath a palm tree" loading="lazy"></div>
 </div></section>
 {closing()}'''
-    return page(body, "Locations", "Livewell Passport locations in Midlothian, Virginia and Inlet Beach, Florida, plus secure telehealth.", 0, "locations")
+    return page(body, "Visit us", "Livewell Passport: in-person office in Midlothian, Virginia, and secure telehealth across Virginia and Florida.", 0, "locations")
 
 def contact_page():
-    loc_opts = "".join(f'<option value="{l["slug"]}">{l["city"]}, {l["st"]}</option>' for l in LOCATIONS) + '<option value="telehealth">Telehealth</option>'
+    visit_opts = '<option value="telehealth">Telehealth (Virginia or Florida)</option><option value="in-person">In person at Midlothian, VA</option><option value="unsure">Not sure yet</option>'
     j_opts = "".join(f'<option value="{j["slug"]}">{j["name"]}</option>' for j in JOURNEYS)
-    sides = "".join(f'''<div class="side-card"><h3>{l["city"]}, {l["st"]}</h3><address>{l["address"]}<br>{l["city_line"]}</address>
-      <a href="tel:{l["tel"]}">{icon("phone")}{l["phone"]}</a></div>''' for l in LOCATIONS)
+    sides = f'''<div class="side-card"><h3>Midlothian, VA office</h3><address>{OFFICE["address"]}<br>{OFFICE["city_line"]}</address><a href="tel:{OFFICE["tel"]}">{icon("phone")}{OFFICE["phone"]}</a></div>
+<div class="side-card"><h3>Telehealth</h3><address>Secure video visits for patients anywhere in Virginia and Florida.</address><a href="index.html#telehealth">{icon("videocamera-small")}How telehealth works</a></div>'''
     body = f'''
 <section class="page-hero pad-m textured"><div class="wrap">
   <div class="crumbs"><a href="index.html">Home</a>{icon("chev")}<span>Start your journey</span></div>
@@ -742,7 +811,7 @@ def contact_page():
         </div>
         <div class="form-row">
           <div class="field"><label for="f-phone">Phone <span class="hint">(optional)</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel"><span class="error" aria-live="polite"></span></div>
-          <div class="field"><label for="f-location">Preferred location</label><select id="f-location" name="location" required><option value="">Choose one</option>{loc_opts}</select><span class="error" aria-live="polite"></span></div>
+          <div class="field"><label for="f-visit">How would you like to visit?</label><select id="f-visit" name="visit">{visit_opts}</select></div>
         </div>
         <div class="field"><label for="f-journey">What brings you in? <span class="hint">(optional)</span></label><select id="f-journey" name="journey"><option value="">Primary care or not sure yet</option>{j_opts}</select></div>
         <div class="field"><label for="f-message">Anything we should know? <span class="hint">(optional)</span></label><textarea id="f-message" name="message" placeholder="Symptoms, goals, or questions about insurance"></textarea></div>
@@ -753,7 +822,7 @@ def contact_page():
       <div class="form-success" tabindex="-1" aria-live="polite">
         <h3>Thanks, <span data-name></span>.</h3>
         <p class="delivered">Your request is in. Our team will be in touch shortly.</p>
-        <p class="not-delivered">This preview isn’t connected to the clinic’s inbox yet. To book now, email <a href="mailto:{EMAIL}">{EMAIL}</a> or call {LOCATIONS[0]["phone"]} (Midlothian) or {LOCATIONS[1]["phone"]} (Inlet Beach).</p>
+        <p class="not-delivered">This preview isn’t connected to the clinic’s inbox yet. To book now, email <a href="mailto:{EMAIL}">{EMAIL}</a> or call {OFFICE["phone"]}.</p>
       </div>
     </div>
     <div style="display:grid;gap:1rem">
@@ -762,7 +831,7 @@ def contact_page():
     </div>
   </div>
 </div></section>'''
-    return page(body, "Start your journey", "Book your first visit with Livewell Passport in Midlothian, VA, Inlet Beach, FL or by telehealth.", 0, "contact")
+    return page(body, "Start your journey", "Book your first visit with Livewell Passport in Midlothian, VA or by telehealth across Virginia and Florida.", 0, "contact")
 
 def faqs_page():
     body = f'''

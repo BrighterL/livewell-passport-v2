@@ -672,3 +672,83 @@ html,body{overflow-x:clip;max-width:100%}
 .rv .verified svg{width:14px;height:14px;fill:#34A853}
 @media (max-width:560px){.rv{flex-basis:280px}}
 .rv .who .av{color:#fff;font-size:.9rem;letter-spacing:.02em}
+
+
+/* ---------- v3.5: one company, telehealth section, single close control on mobile ---------- */
+@media (max-width:1023px){.mega-close{display:none}}
+.loc.virtual{background:linear-gradient(145deg,#fff,#EEF2F5)}
+.pin.tele::before,.pin.tele::after{background:var(--green)}
+.tele-head{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:end;margin-bottom:2.5rem}
+.state-toggle{display:inline-flex;background:var(--bg-2);border-radius:999px;padding:4px;gap:2px}
+.state-toggle button{border:0;background:transparent;padding:.6rem 1.2rem;border-radius:999px;font-family:var(--font-display);font-weight:600;font-size:.95rem;color:var(--ink-2);cursor:pointer;transition:background-color 200ms ease,color 200ms ease,transform 160ms var(--ease-out)}
+.state-toggle button.on{background:var(--ink);color:#fff}
+.state-toggle button:active{transform:scale(.97)}
+@media (max-width:760px){.tele-head{grid-template-columns:1fr}}
+.tele{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,5vw,5rem);align-items:center}
+@media (max-width:980px){.tele{grid-template-columns:1fr}}
+.tele-state{font-family:var(--font-display);font-weight:600;font-size:clamp(1.3rem,2vw,1.7rem);letter-spacing:-.025em;line-height:1.25;margin:0 0 1rem;min-height:2.4em}
+.tele-state span{display:inline-block;animation:fade-up 500ms var(--ease-out) both}
+@keyframes fade-up{from{opacity:0;transform:translateY(8px)}}
+.tele-device{display:grid;gap:1rem}
+.call{position:relative;border-radius:24px;background:#0F1316;padding:14px;box-shadow:var(--shadow);color:#fff;aspect-ratio:16/10;display:grid;grid-template-rows:auto 1fr;gap:10px;overflow:hidden}
+.call-top{display:flex;align-items:center;gap:.6rem;font-family:var(--font-display);font-size:.8rem;color:#C9D1D9}
+.call-top .dot{width:8px;height:8px;border-radius:50%;background:#34A853;box-shadow:0 0 0 0 rgba(52,168,83,.6);animation:live 1.8s ease-out infinite}
+@keyframes live{to{box-shadow:0 0 0 10px rgba(52,168,83,0)}}
+.call-top .lock{margin-left:auto;display:inline-flex;align-items:center;gap:.3rem;background:rgba(255,255,255,.08);padding:.25rem .6rem;border-radius:999px;font-weight:600}
+.call-top .lock svg{width:14px;height:14px}
+.call-stage{position:relative;border-radius:16px;overflow:hidden;background:#161B20}
+.screen{position:absolute;inset:0;opacity:0;transform:scale(.98);transition:opacity 420ms ease,transform 600ms var(--ease-out);pointer-events:none}
+.call[data-step="1"] .s1,.call[data-step="2"] .s2,.call[data-step="3"] .s3{opacity:1;transform:none;pointer-events:auto}
+/* step 1: booking */
+.cal{position:absolute;inset:0;margin:auto;width:min(86%,340px);height:fit-content;background:#fff;color:var(--ink);border-radius:14px;padding:14px;display:grid;gap:10px;font-size:12px}
+.cal-head{display:flex;justify-content:space-between;align-items:center;font-family:var(--font-display)}
+.cal-head b{font-size:13px}.cal-head span{color:var(--ink-3);font-weight:600;font-size:11px}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal-grid span{aspect-ratio:1;display:grid;place-items:center;border-radius:8px;background:var(--bg);font-variant-numeric:tabular-nums}
+.cal-grid span.off{opacity:.35}
+.cal-grid span.pick{background:var(--green);color:#fff;font-weight:700;animation:pick 2.4s ease-in-out infinite}
+@keyframes pick{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+.slots{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.slots span{text-align:center;padding:6px 0;border-radius:8px;border:1px solid var(--line);font-family:var(--font-display);font-weight:600}
+.slots span.pick{background:var(--ink);color:#fff;border-color:var(--ink)}
+.cal-cta{background:var(--green);color:#fff;text-align:center;padding:8px;border-radius:999px;font-family:var(--font-display);font-weight:600}
+/* step 2: the call */
+.s2 .tile{position:absolute;border-radius:14px;overflow:hidden;background:#222930}
+.s2 .tile img{width:100%;height:100%;object-fit:cover}
+.s2 .provider{inset:0}
+.s2 .provider img{object-fit:contain;padding:18%;background:radial-gradient(circle at 50% 40%,#2A3139,#161B20 70%);animation:breathe 4s ease-in-out infinite}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+.s2 .patient{right:12px;bottom:56px;width:32%;aspect-ratio:4/3;border:2px solid rgba(255,255,255,.25);box-shadow:0 10px 30px rgba(0,0,0,.5)}
+.s2 .name{position:absolute;left:10px;bottom:8px;background:rgba(0,0,0,.55);padding:3px 8px;border-radius:999px;font-size:11px;font-family:var(--font-display);font-weight:600}
+.s2 .name em{font-style:normal;color:#9CCBEF}
+.s2 .wave{position:absolute;right:12px;top:12px;display:flex;gap:3px;align-items:flex-end;height:18px}
+.s2 .wave i{width:3px;background:#34A853;border-radius:2px;animation:wave 1s ease-in-out infinite}
+.s2 .wave i:nth-child(2){animation-delay:.15s}.s2 .wave i:nth-child(3){animation-delay:.3s}.s2 .wave i:nth-child(4){animation-delay:.45s}.s2 .wave i:nth-child(5){animation-delay:.6s}
+@keyframes wave{0%,100%{height:4px}50%{height:18px}}
+.s2 .controls{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);display:flex;gap:10px}
+.s2 .controls span{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.16);backdrop-filter:blur(6px)}
+.s2 .controls .end{background:#EA4335}
+.s2 .timer{position:absolute;left:12px;top:12px;background:rgba(0,0,0,.55);padding:3px 8px;border-radius:999px;font-size:11px;font-family:var(--font-display);font-variant-numeric:tabular-nums}
+/* step 3: follow-up messages */
+.msgs{position:absolute;inset:0;padding:16px;display:grid;align-content:end;gap:8px}
+.msg{max-width:78%;padding:9px 12px;border-radius:14px;font-size:12.5px;line-height:1.4;animation:fade-up 500ms var(--ease-out) both}
+.msg.in{background:#fff;color:var(--ink);border-bottom-left-radius:4px;justify-self:start}
+.msg.out{background:var(--green);color:#fff;border-bottom-right-radius:4px;justify-self:end}
+.msg:nth-child(2){animation-delay:.25s}.msg:nth-child(3){animation-delay:.5s}.msg:nth-child(4){animation-delay:.75s}
+.msg.typing{background:#fff;display:flex;gap:4px;padding:10px 12px;justify-self:start}
+.msg.typing i{width:6px;height:6px;border-radius:50%;background:var(--silver-2);animation:typing 1.2s ease-in-out infinite}
+.msg.typing i:nth-child(2){animation-delay:.2s}.msg.typing i:nth-child(3){animation-delay:.4s}
+@keyframes typing{0%,100%{transform:translateY(0);opacity:.5}50%{transform:translateY(-4px);opacity:1}}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem}
+.steps button{text-align:left;border:1px solid var(--line);background:#fff;border-radius:16px;padding:.9rem 1rem;cursor:pointer;display:grid;gap:.15rem;position:relative;overflow:hidden;transition:border-color 200ms ease,transform 160ms var(--ease-out)}
+.steps button b{font-family:var(--font-display);font-weight:700;color:var(--silver-2);font-size:.8rem}
+.steps button span{font-family:var(--font-display);font-weight:600;letter-spacing:-.01em}
+.steps button small{color:var(--ink-2);font-size:.82rem}
+.steps button.on{border-color:var(--ink)}
+.steps button.on b{color:var(--green)}
+.steps button::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--green)}
+.steps button.on::after{animation:progress var(--step-ms,4500ms) linear forwards}
+@keyframes progress{to{width:100%}}
+.steps button:active{transform:scale(.98)}
+@media (max-width:560px){.steps{grid-template-columns:1fr}.steps button.on::after{animation:none}}
+@media (prefers-reduced-motion:reduce){.cal-grid span.pick,.s2 .wave i,.s2 .provider img,.msg,.steps button.on::after,.call-top .dot{animation:none}}

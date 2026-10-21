@@ -53,6 +53,32 @@
     rail.addEventListener('scroll', prog, { passive: true }); window.addEventListener('resize', prog); prog();
   }
 
+  // Telehealth section: state toggle, step tabs that auto-advance, call timer
+  var call = document.querySelector('.call');
+  if (call) {
+    var lines = { Virginia: 'Seeing patients across Virginia, in person in Midlothian or by secure video.', Florida: 'Seeing patients across Florida by secure video, with the same providers and the same plan.' };
+    document.querySelectorAll('[data-state]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        document.querySelectorAll('[data-state]').forEach(function (x) { x.classList.toggle('on', x === b); });
+        document.querySelectorAll('[data-state-name]').forEach(function (n) { n.textContent = b.dataset.state; });
+        var line = document.querySelector('[data-state-line]'); var copy = line.cloneNode(); copy.textContent = lines[b.dataset.state]; line.replaceWith(copy);
+      });
+    });
+    var tabs = document.querySelectorAll('[data-go]'), stepTimer = null, secs = 0, tick = null;
+    function go(n, manual) {
+      call.dataset.step = n;
+      tabs.forEach(function (t) { t.classList.toggle('on', t.dataset.go == n); if (t.dataset.go == n) { t.style.animation = 'none'; void t.offsetWidth; t.style.animation = ''; } });
+      clearInterval(tick); secs = 0; var tEl = call.querySelector('[data-timer]');
+      if (n == 2) { tick = setInterval(function () { secs++; tEl.textContent = ('0' + Math.floor(secs / 60)).slice(-2) + ':' + ('0' + secs % 60).slice(-2); }, 1000); } else tEl.textContent = '00:00';
+      clearTimeout(stepTimer); if (!reduce) stepTimer = setTimeout(function () { go(n % 3 + 1); }, manual ? 7000 : 4500);
+    }
+    tabs.forEach(function (t) { t.addEventListener('click', function () { go(+t.dataset.go, true); }); });
+    if ('IntersectionObserver' in window) {
+      var tio = new IntersectionObserver(function (en) { if (en[0].isIntersecting) { go(1); tio.disconnect(); } }, { threshold: .3 });
+      tio.observe(call);
+    } else go(1);
+  }
+
   // Review cards tilt toward the cursor
   document.querySelectorAll('.rv').forEach(function (card) {
     card.addEventListener('mousemove', function (e) {
@@ -102,7 +128,6 @@
     name: function (v) { return v.trim().length >= 2 || 'Please enter your name.'; },
     email: function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) || 'Enter a valid email address.'; },
     phone: function (v) { return v.trim() === '' || v.replace(/\D/g, '').length >= 10 || 'Enter a 10-digit phone number.'; },
-    location: function (v) { return v !== '' || 'Choose a location.'; },
     consent: function (v, el) { return el.checked || 'Please confirm you agree to be contacted.'; }
   };
   form.addEventListener('submit', function (e) {
