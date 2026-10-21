@@ -1,0 +1,299 @@
+==================== privacy.html | Privacy Policy - Livewell Passport
+Privacy Policy - Livewell Passport
+[h2] Livewell Passport
+[h2] HIPAA Privacy Notice
+Last Updated: February 2026
+[h2] LIVEWELL ENTITY DISCLOSURE & ADMINISTRATIVE OPERATIONS
+In addition to participation in the Privia Health Organized Healthcare Arrangement (OHCA) and/or Affiliated Covered Entity (ACE), certain medical practices operate under the following legal entities:
+• Livewell Passport of VA, LLC
+Livewell Passport of VA, LLC operates and provides healthcare services in the Commonwealth of Virginia.
+While providers may participate in the Privia ACE/OHCA for purposes of HIPAA compliance and care coordination, Livewell entities maintain responsibility for their own administrative operations, communications systems, website management, patient scheduling systems, and messaging platforms.
+[h2] SMS COMMUNICATIONS POLICY
+If you provide your mobile phone number to:
+• Livewell Passport of VA, LLC
+through our website, appointment booking forms, patient registration forms, intake forms, or other consent mechanisms, you may receive SMS communications related to:
+• Appointment scheduling and confirmations
+• Appointment reminders
+• Post-visit instructions
+• Lab result notifications
+• Billing notifications
+• Account-related updates
+• Limited marketing communications, if separately consented
+Message frequency varies.
+Message and data rates may apply.
+You may opt out at any time by replying STOP to any message.
+For assistance, reply HELP.
+Consent to receive SMS messages is not a condition of receiving medical treatment.
+Mobile phone numbers and SMS opt-in data are not sold, rented, or shared with third parties for marketing or promotional purposes.
+SMS communications may be delivered using secure third-party service providers acting on behalf of the applicable Livewell entity under contractual confidentiality obligations.
+[h2] MOBILE DATA & NON-SALE DISCLOSURE
+Livewell does not sell personal information.
+Livewell does not sell, share, transfer, or disclose mobile phone numbers or SMS consent data to third parties for marketing purposes.
+Information may be shared with service providers for operational purposes including:
+• Electronic health record systems
+• Scheduling systems
+• Payment processors
+• Secure messaging platforms
+• Analytics providers
+• IT infrastructure providers
+All such providers are contractually required to maintain confidentiality and safeguard data in accordance with applicable healthcare privacy laws.
+[h2] WEBSITE DATA COLLECTION & TRACKING TECHNOLOGIES
+Livewell websites may use cookies and similar technologies to:
+• Maintain website functionality
+• Improve user experience
+• Analyze site performance
+• Support appointment booking
+• Understand general traffic patterns
+Cookies do not collect or store Protected Health Information.
+Analytics tools may collect:
+• IP address
+• Browser type
+• Device information
+• Pages visited
+• Time spent on pages
+This information is used for operational and performance improvement purposes only.
+You may control cookies through your browser settings. Disabling cookies may affect certain website features.
+[h2] VIRGINIA ENTITY IDENTIFICATION FOR COMMUNICATIONS
+For communications, scheduling, and SMS services provided in Virginia, the responsible entity is:
+Livewell Passport of VA LLC
+All Virginia-based SMS campaigns, messaging programs, and telecommunications registrations are conducted under this legal entity where applicable.
+[h2] ADMINISTRATIVE ENTITY
+Livewell Passport of VA LLC may provide centralized administrative support including:
+• Marketing systems
+• CRM systems
+• Communication platforms
+• Technology infrastructure
+• Website management
+Administrative support does not alter HIPAA responsibilities of providers participating in the Privia ACE/OHCA.
+[h2] NO RETALIATION
+Livewell will not retaliate against any individual for exercising privacy rights or filing a complaint.
+[h4]
+[h4] Notice of Privacy Practices
+This Notice is provided to you pursuant to the privacy regulations enacted as a result of the Health Insurance Portability and Accountability Act of 1996 (HIPAA). THIS JOINT NOTICE OF PRIVACY PRACTICES DESCRIBES HOW YOUR MEDICAL INFORMATION MAY BE USED AND DISCLOSED AND HOW YOU CAN GET ACCESS TO YOUR INFORMATION. This Notice applies to all your medical information created or maintained by the members of the Privia Health Organized Healthcare Arrangement (collectively referred to in this Notice as “Privia” and further defined in Section B below). PLEASE REVIEW THIS NOTICE CAREFULLY.
+[h4] A. OUR COMMITMENT TO YOUR PRIVACY
+The terms of this Notice apply to all of your Protected Health Information (“PHI”) created or maintained by Privia. We reserve the right to change this Notice at any time. Any change to this Notice will be effective for all of the PHI we already have about you, as well as for any PHI we receive in the future. Privia will post a copy of our current Notice online at priviahealth.com/HIPAA and on all Privia care center websites. You may also request a copy of our most current Notice at any time by contacting Privia’s Privacy Officer (see Section J. Contact/Complaint Information below).
+This Notice of Privacy Practices is NOT an authorization; rather it describes how we, our Business Associates, and their subcontractors may use and disclose your Protected Health Information to carry out treatment, payment, or health care operations, and for other purposes as permitted or required by law. It also describes your rights to access and control your Protected Health Information.
+“Protected Health Information” (“PHI”) means information that identifies you individually; including demographic information, and information that relates to your past, present, or future physical or mental health condition and/or related health care services.
+[h4] B. PERSONS/ENTITIES COVERED BY THIS NOTICE
+Your provider is part of an Affiliated Covered Entity (ACE) and/or Organized Health Care Arrangement (OHCA) by virtue of his or her affiliation with a Privia Medical Group and/or a Privia Quality Network (Privia Health’s Clinically Integrated Networks and Accountable Care Organizations) (collectively these entities are referred to as “Privia”). For the purposes of complying with federal privacy and security requirements, the above-described entities have designated themselves as an ACE and/or OHCA. An OHCA is a clinically integrated care setting in which patients may receive care from multiple providers who share a common set of privacy practices. Privia providers in our OHCA have agreed to follow the terms of this Notice when providing services through Privia. An ACE is an entity where legally separate covered entities that are affiliated designate themselves as a single covered entity for purposes of the HIPAA privacy rule. Although each care center in an ACE is legally separate and responsible for its own acts, Privia coordinates privacy practices among the Privia care centers in our ACE. Patient information is shared across the Privia ACE/OHCA for treatment, payment, and healthcare operations related to the ACE/OHCA. Your PHI can be shared across the ACE/OHCA for the purposes of your treatment, payment, and healthcare operations. When PHI is shared for healthcare operations, the person or organization using your PHI must have a relationship with you, unless your PHI is used for quality assurance, utilization review, and peer review purposes.
+IMPORTANT: Privia may disclose your PHI to providers affiliated with the Privia ACE/OHCA and other independent medical professionals in order to provide patient treatment and for payment purposes and healthcare operations. Although providers affiliated with the Privia ACE/OHCA have agreed to follow this Notice and participate in the Privia privacy program, they are independent professionals and Privia expressly disclaims any responsibility or liability for their acts or omissions relating to your care or privacy/security rights.
+[h4] C. CONTACT FOR QUESTIONS
+For more information or questions about the privacy policies of the Privia ACE/OHCA, please contact:
+Privacy Officer
+950 N Glebe Rd, Suite 700 Arlington, VA 22203(571) 317-0679privacy@priviahealth.com
+[h4] D. USE AND DISCLOSURE OF YOUR INDIVIDUALLY IDENTIFIABLE HEALTH INFORMATION (PHI
+1. Treatment. Privia may use or share your PHI to provide medical treatment or services for you and manage and coordinate your medical care. Privia may disclose your PHI to physicians and health care providers (including pharmacists), durable medical equipment (DME) solutions, surgery centers, hospitals, rehabilitation therapists, home health providers, laboratories, nurse case managers, worker’s compensation adjusters, etc. to ensure that your medical providers have the necessary information to diagnose and provide treatment to you. For example, a doctor treating you for a broken leg may need to know if you have diabetes because diabetes may affect the healing process. Privia may also disclose your PHI to individuals who are directly involved in your care, including family members, friends or other care providers. If you participate in a virtual visit (telehealth), your information will be shared electronically via a secure transmission to facilitate the virtual visit.
+2. Payment. Privia may use and disclose your PHI in order to bill for services provided and collect payment from health plans or other entities. For example, we may disclose PHI to your health insurance plan so it will pay for your services, determine your eligibility for coverage, or to obtain prior approval from the insurer to cover payment for treatment. Privia also may use and disclose your PHI to obtain payment from third parties that may be responsible for such costs, including family members. Privia may also disclose your information to a collection agency to obtain overdue payment or to a regulatory agency or insurance company to determine whether the services we provided were medically necessary or appropriately billed.
+3. Health Care Operations. Privia and its providers may use and disclose your PHI to run our businesses, improve your care, and contact you when necessary. For example: We may use or disclose your PHI: (1) to conduct quality or patient safety activities, population-based activities relating to improving health or reducing health care costs, case management and care coordination, and contacting your health care providers and you with information about treatment alternatives; (2) when conducting training programs or performing accreditation, licensing, or credentialing activities; (3) when conducting or arranging for medical review, legal services, and auditing functions; and (4) for our proper management and administration, including customer service, resolving complaints, strategic planning, etc. In addition, we may use or disclose de-identified information or a limited data set for certain healthcare operations purposes. We may also record your visit in order to facilitate the documentation of your care by your provider via a scribe service.
+4. Appointment Reminders, Check-In and Results. Privia may use and disclose your PHI to contact you and remind you of an appointment. Privia may use a sign-in sheet at the registration desk and call you by name in the waiting room when your provider is ready to see you. Privia may also use your PHI to contact you about test results. Privia may leave a message reminding you of an appointment or the results of certain tests, but will leave the minimum amount of information necessary to communicate this information.
+5. Treatment Options and Health-Related Benefits and Services. Privia may use and disclose your PHI to inform you of treatment options or alternatives as well as certain health-related products, benefits or services that may be of interest to you. Privia may also use and disclose your PHI to provide you with information about payment for such products, benefits or services, including payment that might be available to you through your benefit plan. Privia may also use or disclose your PHI to offer information on other providers participating in a healthcare network in which Privia participates. In addition, Privia may use or disclose PHI to have communications sent to Privia’s patients about certain government and government-sponsored programs including the Medicare Advantage and Medicare Part D Prescription Drug programs.
+6. Disclosures to Family or Friends. Privia may disclose your PHI to individuals involved in your care or treatment or Privia Notice of Privacy Practices Effective August 2023 responsible for payment of your care or treatment. If you are incapacitated, we may disclose your PHI to the person named in your Durable Power of Attorney for Health Care or your personal representative (the individual authorized by law to make health-related decisions for you). In the event of a disaster, your PHI may be disclosed to disaster relief organizations to coordinate your care and/or to notify family members or friends of your location and condition.
+7. Disclosures Required By Law. Privia will use and disclose your PHI when we are required to do so by federal, state or local law. For example, Privia may disclose PHI to comply with child and elder abuse reporting laws or to report certain diseases, injuries or deaths to state or federal agencies.
+[h4] E. USE AND DISCLOSURE OF YOUR PHI IN CERTAIN SPECIAL CIRCUMSTANCES
+1. Public Health Reporting. Privia may disclose and may be required by law to disclose your PHI for certain public health purposes. For example, Privia may disclose your PHI to the Food and Drug Administration (FDA) regarding the quality and safety of an FDA-regulated product or activity; to prevent or control disease; report births and deaths; to report child abuse and/or neglect; to report reactions to medications or problems with health products; to provide notification of recalls of products; or report a person who may have been exposed to a disease or may be at risk of contracting and/or spreading a disease or condition. In addition, Privia may provide proof of immunizations to a school that requires a patient’s immunization record prior to enrollment or admittance of a student if you have informally agreed to the disclosure for yourself or on behalf of your legal dependent.
+2. Health Oversight Activities. Privia may disclose your PHI to a health oversight agency for investigations, inspections, audits, surveys, licensure and disciplinary actions, and in certain civil, administrative, and criminal procedures or actions, or other health oversight activities as authorized by law.
+3. Lawsuits and Disputes. Privia may disclose your PHI in response to a court or administrative order, subpoena, request for discovery, or other legal processes. However, absent a court order, Privia will generally disclose your PHI if you have authorized the disclosure or efforts have been made to inform you of the request or obtain an order protecting the information requested. Your information may also be disclosed if required for our legal defense in the event of a lawsuit.
+4. Law Enforcement. Privia may disclose your PHI if requested by a law enforcement official: (a) regarding a crime victim in certain situations, if we are unable to obtain the person’s agreement; (b) about a death we believe resulted from criminal conduct; (c) regarding criminal conduct on our premises; (d) in response to a warrant, summons, court order, subpoena or similar legal process; (e) to identify/locate a suspect, material witness, fugitive or missing person; or (f) in an emergency, to report a crime (including the location or victim(s) of the crime, or the description, identity or location of the perpetrator).
+5. Deceased Patients. Privia may disclose your PHI to a medical examiner or coroner to identify a deceased individual or to identify the cause of death. In addition, we may disclose PHI necessary for funeral directors to fulfill their responsibilities.
+6. Organ and Tissue Donation. Privia may disclose your PHI to organizations that handle organ, eye or tissue procurement or transplantation, including organ donation or blood banks, as necessary to facilitate donation and transplantation if you are a donor.
+7. Research. Privia may use and disclose your PHI to researchers for the purpose of conducting research with your written authorization or when the research has been approved by an Institutional Review Board and is in compliance with law governing research. In certain situations, the need for your individual consent may be waived by a Privacy Board.
+8. Serious Threats to Health or Safety. Privia may use and disclose your PHI when necessary to reduce or prevent a serious threat to your health and safety or the health and safety of another individual or the public. Under these circumstances, we will only make disclosures to a person or organization able to help prevent the threat.
+9. Military, National Security, and other Specialized Government Functions. If you are in the military or involved in national security or intelligence, Privia may disclose your PHI to authorized officials. Privia also may disclose your PHI to authorized federal officials in order to protect the President, other officials or foreign heads of state, or to conduct certaininvestigations.
+10. Workers’ Compensation. Privia will disclose only the PHI necessary for worker’s compensation in compliance with worker’s compensation laws. This information may be reported to your employer and/or your employer’s representative in the case of an occupational injury or illness.
+11. Inmates. If you are an inmate or in the custody of a law enforcement official, Privia may disclose your PHI to correctional institutions or law enforcement officials as necessary: (a) for the institution to provide health care services to you; (b) for the safety and security of the law enforcement officer or the correctional institution; and/or (c) to protect your health and safety or the health and safety of other individuals.
+12. Minors. If you are a minor (generally an individual under 18 years old), we may disclose your PHI to your parent or guardian unless otherwise prohibited by law.
+[h4] F. YOUR PRIVACY RIGHTS REGARDING YOUR PHI
+1. Inspection and Copies. You may request a copy of, or request to inspect, the PHI that is used to make decisions about you, including medical and billing records and laboratory and imaging reports. You have the right to obtain an electronic copy if it is readily producible by us in the form and format requested, or you may request that we provide a paper copy of your record. You may also request a summary of your record. We will provide your health information, to you or whomever you designate to receive it, usually within thirty (30) days of your request, unless a shorter time is specified by state law. Privia may charge a reasonable cost-based fee to cover the costs of copying, mailing, labor and supplies associated with your request. Privia may deny your request to inspect and/or copy in certain limited circumstances; however, you may request a review of our denial. There may be times that your provider, in his or her professional judgment, may not think it is in your best interest to have access to your medical record. Depending on the reason for the decision to deny a request, we may ask another licensed provider chosen by us to conduct a review of your request and its denial.
+2. Confidential Communications. You may request in writing that we communicate with you in a specific way or send mail to a different address. For example, you may request that we contact you at home, rather than work or by mail. Privia will accommodate all reasonable requests. You do not need to give a reason for your request. We will comply with your request if we are reasonably able to do so.
+3. Amendment. You may request a correction or amendment of your PHI if you believe it is incorrect or incomplete. You may make a written request for a correction or amendment for as long as your PHI is maintained by or for Privia. Requests must provide a reason or explanation that supports the request. Privia will deny your request if it is not in writing or if, in the provider’s opinion, the information is: (a) accurate and complete; (b) not part of the PHI maintained by or for Privia; (c) not part of the PHI that you have the right to inspect and copy; or (d) not created by Privia, unless the individual or entity that created the information is not available to amend the information. Privia will notify you in writing within sixty (60) days if we cannot fulfill your request.
+4. Accounting of Disclosures. You may request an accounting of certain disclosures that Privia has made of your PHI. This accounting will list the disclosures that we have made of your PHI but will not include disclosures made for the purposes of treatment, payment, health care operations, disclosures required by law, and certain other disclosures (such as any you asked us to make). Your request must be in writing and state the time period for which you want the accounting (not to exceed six (6) years prior to the date you make the request). Privia will provide one accounting a year for free but will charge a reasonable, cost-based fee if you ask for another one within twelve (12) months. Privia will notify you of the costs involved with any additional request and you may withdraw your request before you incur any costs.
+5. Requests for Restrictions. You have the right to request that Privia not use or share your PHI for treatment, payment, or health care operations. We are not required to agree to your request, and we may say “no” if we believe it might affect your care. If you pay for a service or health care item out-of-pocket in full, you may ask us not to share that information for the purpose of payment or our operations with your health insurer. In that case, we will approve your request unless a law specifically requires us to share that information.
+6. Health Information Exchange Opt-Out. You have the right to opt-out of disclosure of your medical records to or via an electronic health information exchange (“HIE”). However, information that is sent to or via an HIE prior to processing your opt-out may continue to be maintained by and be accessible through the HIE. You must opt out of disclosures to or via an HIE through each of your individual treating providers who may participate in any given HIE. See H. USING TECHNOLOGY TO IMPROVE HEALTHCARE below for more information regarding HIE.
+7. Right to Receive a Notice of a Breach of Unsecured Medical Information. You have the right to receive prompt notice in writing of a breach of your PHI that may have compromised the privacy or security of your information.
+8. Right to a Paper Copy of This Notice. You have the right to receive a paper copy of this notice at any time even if you have agreed to receive the notice electronically. You may also obtain a copy of this notice at our website — priviahealth.com/HIPAA.
+9. Right to File a Complaint. If you believe your rights have been violated, you may file a complaint with us or with the Secretary of the Department of Health and Human Services (“HHS”), Office for Civil Rights, 200 Independence Avenue, S.W., Washington, D.C. 20201, calling 1-877-696-6775, or visiting:
+www.hhs.gov/ocr/privacy/hipaa/complaints/. All complaints must be submitted in writing. You will not be penalized for filing a complaint.
+[h4] G. ADDITIONAL INFORMATION
+1. Patient Portal and Other Patient Electronic Correspondence. Privia may use and disclose your PHI through various secure patient portals that allow you to view, download and transmit certain medical and billing information and communicate with certain health care providers in a secure manner through the portal. For more information on the Privia patient portal, please visit our website at:https://www.priviahealth.com/signin.html
+2. Your Contact Information:Home and Email Addresses/Phone Numbers. If you provide us with a home or email address, home/work/cell telephone number, or other contact information during any registration or administrative process we will assume that the information you provided us is accurate and that you consent to our use of this information to communicate with you about your treatment, payment for service and health care operations. You are responsible to notify us of any change of this information. Privia reserves the right to utilize third parties to update this information for our records as needed.
+3. Email or Downloading PHI. If you email us medical or billing information from a private email address (such as a Yahoo, Gmail, etc. account), your information may not be secure in transmission. We therefore recommend you use your Privia patient portal to communicate with us regarding your care and/or billing issues. If you request that Privia email your PHI to a private email address, we will send it in an encrypted manner unless you request otherwise. Privia is not responsible for the privacy or security of your PHI if you request that we send it to you in an unsecured manner or download, or post it on a dropbox, unencrypted USB drive, CD or other unsecure medium. In addition, Privia is not responsible if your PHI is redisclosed, damaged, altered or otherwise misused by an authorized recipient. In addition, if you share an email account with another person (for example, your spouse/partner/roommate) or you choose to store, print, email, or post your PHI, it may not be private or secure.
+4. Sensitive Health Information. Federal and state laws provide special protection for certain types of health information, including psychotherapy notes, information about substance use disorders and treatment, mental health and AIDS/HIV or other communicable diseases, and may limit whether and how we may disclose information about you to others.
+5. Substance Use Disorder Records and Information. The confidentiality of patient records maintained by federally assisted substance use disorder rehabilitation programs is protected by Federal law and regulations. Generally, such programs may not disclose any information that would identify an individual as having or being treated for a substance use disorder unless:
+the individual consents in writing;
+the disclosure is allowed by a court order;
+the disclosure is made to medical personnel in a medical emergency or to qualified personnel for research, audit, orprogram evaluation; or
+as otherwise permitted by law.
+(Notwithstanding the preceding, we may disclose certain information that could identify you as having a substance use disorder pursuant to paragraph 6, below.)
+Violation of these laws and regulations is a crime. Suspected violations may be reported to appropriate authorities in accordance with Federal regulations. Federal law and regulations do not protect any information about a crime committed by a patient either at the program or against any person who works for the program or about any threat to commit such a crime. Federal laws and regulations do not prevent any information about suspected child abuse or neglect from being reported under state law to appropriate state or local authorities.
+6. Consent to Disclose Sensitive Health and Substance Use Disorder Information. The Privia Authorization & Consent to Treat form you sign as part of the registration process includes your consent to the release of federally assisted substance use disorder information, information regarding treatment of communicable diseases and mental health information for the purposes specified in this notice. If you do not wish for this information to be disclosed, you must notify us in writing and we will determine if it is feasible for us to accept your request.
+7. Incidental Disclosures. Despite our efforts to protect your privacy, your PHI may be overheard or seen by people not involved in your care. For example, other individuals at your provider’s office could overhear a conversation about you or see you getting treatment. Such incidental disclosures are not a violation of HIPAA.
+8. Business Associates. Your PHI may be disclosed to individuals or entities who provide services to or on behalf of Privia. Pursuant to HIPAA, Privia requires these companies sign business associate or confidentiality agreements before we disclose your PHI to them. However, Privia generally does not control the business, privacy, or security operations of our business associates.
+9. Authorization for Other Uses and Disclosures. Privia will obtain your written authorization for uses and disclosures that are not identified by this notice or otherwise required or permitted by applicable law. Any authorization you provide regarding the use and disclosure of your PHI may be revoked at any time in writing. After you revoke your authorization, we will no longer use or disclose your PHI for the reasons described in the authorization. However, your revocation will not affect actions we have already taken; in other words, we are unable to take back any disclosures of PHI we have already made.
+[h4] H. USING TECHNOLOGY TO IMPROVE HEALTHCARE
+Health Information Exchange (HIE) enables your healthcare providers to quickly and securely share your health information electronically among a network of healthcare providers, including physicians, hospitals, laboratories and pharmacies. Your health information is transmitted securely and only authorized healthcare providers with a valid reason may access your information.
+How does HIE Help You?
+Improved access to information will enable us to provide better care for our patients.
+Improved Care Access to information about your health history and medical care gives your healthcare provider a more complete picture of your overall health. This can help your provider make better decisions about your care. The information may also prevent you from having repeat tests, saving you time, money and worry.
+Emergency Treatment In an emergency, your providers may immediately check to see if you have allergies, health problems, test results, medications or previous concerns that may help them provide you with emergency care.
+Helps to Protect Privacy and Information Security By sharing information electronically through a secure system, the risk that your paper or faxed records will be misused or misplaced is reduced.
+How does HIE help protect your medical information and keep it secure?
+Privia is committed to protecting the privacy and security of your health information, including the sharing and accessing of your information through HIE.
+Every HIE and its participants must protect your private medical information under HIPAA law, as well as applicable state laws and regulations.
+Information shared via HIE is encrypted, meaning it can be accessed only by authorized users. This prevents hackers from accessing your information.
+Every individual who can access your information must have their own username and password and must receive training before they can access your information.
+The HIE records every time someone accesses your information. Upon request, the HIE can track who accessed your information and provide a report to the Privia Privacy Officer.
+You have choices about participating in HIEs.
+Privia recognizes you have certain rights related to how we share your information. You have the following choices:
+Choice 1: Say Yes. No further action needed.
+If you agree to have your medical information shared through HIE and you have a current Authorization and Consent to Treat form on file, you do not need to do anything. By signing the form, you have granted us permission to share your health information to HIE.
+Choice 2: Say No Thanks. Follow the Instructions on the HIE Opt-Out Form.
+We recognize your right to choose not to participate in HIE, also referred to as opting-out. If you decide to opt-out of HIE, healthcare providers will not be able to access your health information through HIE. You should understand that providers may still request and receive your medical information from other providers using other methods permitted by law, such as fax, mail or other electronic communication.
+If you want to opt-out of participating in HIE, please follow the appropriate procedure as outlined on the Privia HIE Opt-Out Request Form and/or contact the HIE directly. You may download and print the form on your computer or ask for a copy at any Privia care center location. Please read the Opt-Out Request Form carefully and follow the instructions on the form to opt out of HIE.
+Please note, your opt-out does not affect health information that was disclosed through HIE prior to the time that you opted out.
+Choice 3: You can change your mind at any time.
+You can consent today to the sharing of your information via HIE and change your mind later by following the instructions on the opt-out form described under Choice 2.
+You can opt out of HIE today and change your mind later by submitting a Privia HIE Reinstatement of Participation Form or, in certain cases, by contacting the HIE directly. The reinstatement form is available to download and print on your computer or you may ask for a copy of the form at any Privia care center location. Please follow the instructions on the form to opt back in to HIE.
+If you have any questions about HIE, you can email privacy@priviahealth.com. To opt-out of HIE, please email medicalrecords@priviahealth.com.
+I. NO WAIVER. Under no circumstances will Privia require an individual to waive his or her rights under the HIPAA Privacy Rule or the HIPAA Breach Notification Rule as a condition for receiving treatment.
+J. CONTACT/COMPLAINT INFORMATION. If you have any questions about this Notice or wish to file a privacy complaint, please contact:
+Privacy Officer
+950 N Glebe Rd, Suite 700 Arlington, VA 22203(571) 317-0679privacy@priviahealth.com
+You can also file a complaint directly with the U.S. Department of Health and Human Services Office for Civil Rights by sending a letter to:
+200 Independence Avenue, S.W Washington, D.C. 20201Or by calling: 1-877-696-6775
+Or online at: www.hhs.gov/ocr/privacy/hipaa/complaints/
+If your provider is licensed in Texas, you can also file a complaint with the Texas Department of State Health Services Investigations:
+P.O. Box 141369 Austin, Texas 78714-1369
+More information is at: https://dshs.texas.gov/hipaa/privacycomplaints.shtm
+Your Healthcare Journey Reimagined.
+[h4] Accessible Links
+Start Your Journey
+All Locations
+Privacy Policy
+Terms & Conditions
+[h4] Locations
+Midlothian, VA
+Inlet Beach, FL
+© 2026 Livewell Passport of VA LLC. All Rights Reserved
+Important Disclaimer:
+Cancellation, Billing & Refund Policy
+All memberships and recurring services require a minimum of thirty (30) days’ notice for cancellation. It is the patient’s responsibility to formally cancel their membership if they no longer wish to continue services.
+Failure to cancel will result in continued monthly billing. No refunds will be issued for any charges already incurred, including but not limited to membership fees, recurring charges, or services billed prior to or during the cancellation notice period.
+By enrolling, the patient acknowledges and agrees that all charges are non-refundable once processed.
+Facebook
+Instagram
+
+==================== terms.html | Terms and Conditions - Livewell Passport
+Terms and Conditions - Livewell Passport
+[h2] Livewell Passport
+[h2] Terms and Conditions
+Last updated: March 11, 2025
+Please read these terms and conditions carefully before using Our Service.
+[h3] Interpretation and Definitions
+[h4] Interpretation
+The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
+[h4] Definitions
+For the purposes of these Terms and Conditions:
+Affiliate means an entity that controls, is controlled by or is under common control with a party, where “control” means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.
+Country refers to: Virginia, United States
+Company (referred to as either “the Company”, “We”, “Us” or “Our” in this Agreement) refers to Livewell Passport of VA LLC 15801 Swindon Way, Midlothian VA 23112.
+Device means any device that can access the Service such as a computer, a cellphone or a digital tablet.
+Feedback means feedback, innovations or suggestions sent by You regarding the attributes, performance or features of our Service.
+Promotions refer to contests, sweepstakes or other promotions offered through the Service.
+Service refers to the Website.
+Subscriptions refer to the services or access to the Service offered on a subscription basis by the Company to You.
+Terms and Conditions (also referred as “Terms”) mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service.
+Third-party Social Media Service means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.
+Website refers to Livewell Passport, accessible from https://livewellpassport.com/ https://livewellpassport.com/
+You means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.
+[h3] Acknowledgment
+These are the Terms and Conditions governing the use of this Service and the agreement that operates between You and the Company. These Terms and Conditions set out the rights and obligations of all users regarding the use of the Service.
+Your access to and use of the Service is conditioned on Your acceptance of and compliance with these Terms and Conditions. These Terms and Conditions apply to all visitors, users and others who access or use the Service.
+By accessing or using the Service You agree to be bound by these Terms and Conditions. If You disagree with any part of these Terms and Conditions then You may not access the Service.
+You represent that you are over the age of 18. The Company does not permit those under 18 to use the Service.
+Your access to and use of the Service is also conditioned on Your acceptance of and compliance with the Privacy Policy of the Company. Our Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your personal information when You use the Application or the Website and tells You about Your privacy rights and how the law protects You. Please read Our Privacy Policy carefully before using Our Service.
+[h3] Subscriptions
+[h4] Subscription period
+The Service or some parts of the Service are available only with a paid Subscription. You will be billed in advance on a recurring and periodic basis (such as daily, weekly, monthly or annually), depending on the type of Subscription plan you select when purchasing the Subscription.
+At the end of each period, Your Subscription will automatically renew under the exact same conditions unless You cancel it or the Company cancels it.
+[h4] Subscription cancellations
+You may cancel Your Subscription renewal either through Your Account settings page or by contacting the Company. You will not receive a refund for the fees You already paid for Your current Subscription period and You will be able to access the Service until the end of Your current Subscription period.
+[h4] Billing
+You shall provide the Company with accurate and complete billing information including full name, address, state, zip code, telephone number, and a valid payment method information.
+Should automatic billing fail to occur for any reason, the Company will issue an electronic invoice indicating that you must proceed manually, within a certain deadline date, with the full payment corresponding to the billing period as indicated on the invoice.
+[h4] Fee Changes
+The Company, in its sole discretion and at any time, may modify the Subscription fees. Any Subscription fee change will become effective at the end of the then-current Subscription period.
+The Company will provide You with reasonable prior notice of any change in Subscription fees to give You an opportunity to terminate Your Subscription before such change becomes effective.
+Your continued use of the Service after the Subscription fee change comes into effect constitutes Your agreement to pay the modified Subscription fee amount.
+[h4] Refunds
+Except when required by law, paid Subscription fees are non-refundable.
+Certain refund requests for Subscriptions may be considered by the Company on a case-by-case basis and granted at the sole discretion of the Company.
+[h3] SMS Terms of Service
+By opting into SMS from a web form or other medium, you are agreeing to receive SMS messages from Livewell Passport. This includes SMS messages for appointment scheduling, appointment reminders, post-visit instructions, lab notifications, and billing notifications. Message frequency varies. Message and data rates may apply. See privacy policy at https://livewellpassport.com/privacy-policy/ Message HELP for help. Reply STOP to any message to opt-out. After you send the SMS message “STOP” to us, we will send you an SMS message to confirm that you have been unsubscribed. After this, you will no longer receive SMS messages from us. If you want to join again, just sign up as you did the first time and we will start sending SMS messages to you again.
+If you are experiencing issues with the messaging program you can reply with the keyword HELP for more assistance, or you can get help directly at info@livewellpassport.com
+Carriers are not liable for delayed or undelivered messages
+[h3] Promotions
+Any Promotions made available through the Service may be governed by rules that are separate from these Terms.
+If You participate in any Promotions, please review the applicable rules as well as our Privacy policy. If the rules for a Promotion conflict with these Terms, the Promotion rules will apply.
+[h3] Intellectual Property
+The Service and its original content (excluding Content provided by You or other users), features and functionality are and will remain the exclusive property of the Company and its licensors.
+The Service is protected by copyright, trademark, and other laws of both the Country and foreign countries.
+Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of the Company.
+[h3] Your Feedback to Us
+You assign all rights, title and interest in any Feedback You provide the Company. If for any reason such assignment is ineffective, You agree to grant the Company a non-exclusive, perpetual, irrevocable, royalty free, worldwide right and license to use, reproduce, disclose, sub-license, distribute, modify and exploit such Feedback without restriction.
+[h3] Links to Other Websites
+Our Service may contain links to third-party web sites or services that are not owned or controlled by the Company.
+The Company has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that the Company shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods or services available on or through any such web sites or services.
+We strongly advise You to read the terms and conditions and privacy policies of any third-party web sites or services that You visit.
+[h3] Termination
+We may terminate or suspend Your access immediately, without prior notice or liability, for any reason whatsoever, including without limitation if You breach these Terms and Conditions.
+Upon termination, Your right to use the Service will cease immediately.
+[h3] Limitation of Liability
+Notwithstanding any damages that You might incur, the entire liability of the Company and any of its suppliers under any provision of this Terms and Your exclusive remedy for all of the foregoing shall be limited to the amount actually paid by You through the Service or 100 USD if You haven’t purchased anything through the Service.
+To the maximum extent permitted by applicable law, in no event shall the Company or its suppliers be liable for any special, incidental, indirect, or consequential damages whatsoever (including, but not limited to, damages for loss of profits, loss of data or other information, for business interruption, for personal injury, loss of privacy arising out of or in any way related to the use of or inability to use the Service, third-party software and/or third-party hardware used with the Service, or otherwise in connection with any provision of this Terms), even if the Company or any supplier has been advised of the possibility of such damages and even if the remedy fails of its essential purpose.
+Some states do not allow the exclusion of implied warranties or limitation of liability for incidental or consequential damages, which means that some of the above limitations may not apply. In these states, each party’s liability will be limited to the greatest extent permitted by law.
+[h3] “AS IS” and “AS AVAILABLE” Disclaimer
+The Service is provided to You “AS IS” and “AS AVAILABLE” and with all faults and defects without warranty of any kind. To the maximum extent permitted under applicable law, the Company, on its own behalf and on behalf of its Affiliates and its and their respective licensors and service providers, expressly disclaims all warranties, whether express, implied, statutory or otherwise, with respect to the Service, including all implied warranties of merchantability, fitness for a particular purpose, title and non-infringement, and warranties that may arise out of course of dealing, course of performance, usage or trade practice. Without limitation to the foregoing, the Company provides no warranty or undertaking, and makes no representation of any kind that the Service will meet Your requirements, achieve any intended results, be compatible or work with any other software, applications, systems or services, operate without interruption, meet any performance or reliability standards or be error free or that any errors or defects can or will be corrected.
+Without limiting the foregoing, neither the Company nor any of the company’s provider makes any representation or warranty of any kind, express or implied: (i) as to the operation or availability of the Service, or the information, content, and materials or products included thereon; (ii) that the Service will be uninterrupted or error-free; (iii) as to the accuracy, reliability, or currency of any information or content provided through the Service; or (iv) that the Service, its servers, the content, or e-mails sent from or on behalf of the Company are free of viruses, scripts, trojan horses, worms, malware, timebombs or other harmful components.
+Some jurisdictions do not allow the exclusion of certain types of warranties or limitations on applicable statutory rights of a consumer, so some or all of the above exclusions and limitations may not apply to You. But in such a case the exclusions and limitations set forth in this section shall be applied to the greatest extent enforceable under applicable law.
+[h3] Governing Law
+The laws of the Country, excluding its conflicts of law rules, shall govern this Terms and Your use of the Service. Your use of the Application may also be subject to other local, state, national, or international laws.
+[h3] Disputes Resolution
+If You have any concern or dispute about the Service, You agree to first try to resolve the dispute informally by contacting the Company.
+[h3] For European Union (EU) Users
+If You are a European Union consumer, you will benefit from any mandatory provisions of the law of the country in which You are resident.
+[h3] United States Federal Government End
+[h4] Use Provisions
+If You are a U.S. federal government end user, our Service is a “Commercial Item” as that term is defined at 48 C.F.R. §2.101.
+[h3] United States Legal Compliance
+You represent and warrant that (i) You are not located in a country that is subject to the United States government embargo, or that has been designated by the United States government as a “terrorist supporting” country, and (ii) You are not listed on any United States government list of prohibited or restricted parties.
+[h3] Severability and Waiver
+[h4] Severability
+If any provision of these Terms is held to be unenforceable or invalid, such provision will be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law and the remaining provisions will continue in full force and effect.
+[h4] Waiver
+Except as provided herein, the failure to exercise a right or to require performance of an obligation under these Terms shall not affect a party’s ability to exercise such right or require such performance at any time thereafter nor shall the waiver of a breach constitute a waiver of any subsequent breach.
+[h3] Translation Interpretation
+These Terms and Conditions may have been translated if We have made them available to You on our Service. You agree that the original English text shall prevail in the case of a dispute.
+[h3] Changes to These Terms and Conditions
+We reserve the right, at Our sole discretion, to modify or replace these Terms at any time. If a revision is material We will make reasonable efforts to provide at least 30 days’ notice prior to any new terms taking effect. What constitutes a material change will be determined at Our sole discretion.
+By continuing to access or use Our Service after those revisions become effective, You agree to be bound by the revised terms. If You do not agree to the new terms, in whole or in part, please stop using the website and the Service.
+[h3] Contact Us
+If you have any questions about these Terms and Conditions, You can contact us:
+By email: info@livewellpassport.com
+Your Healthcare Journey Reimagined.
+[h4] Accessible Links
+Start Your Journey
+All Locations
+Privacy Policy
+Terms & Conditions
+[h4] Locations
+Midlothian, VA
+Inlet Beach, FL
+© 2026 Livewell Passport of VA LLC. All Rights Reserved
+Important Disclaimer:
+Cancellation, Billing & Refund Policy
+All memberships and recurring services require a minimum of thirty (30) days’ notice for cancellation. It is the patient’s responsibility to formally cancel their membership if they no longer wish to continue services.
+Failure to cancel will result in continued monthly billing. No refunds will be issued for any charges already incurred, including but not limited to membership fees, recurring charges, or services billed prior to or during the cancellation notice period.
+By enrolling, the patient acknowledges and agrees that all charges are non-refundable once processed.
+Facebook
+Instagram
+

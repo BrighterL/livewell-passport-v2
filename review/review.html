@@ -1,0 +1,387 @@
+<title>Livewell Passport Review</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Review shell: the site runs inside, you switch widths, click to pin notes. Tokens mirror the site. */
+:root{--bg:#E9ECF0;--panel:#FFFFFF;--ink:#121518;--ink-2:#4A535C;--ink-3:#6F7984;--line:#D4D9DF;--accent:#2F7F5F;--blue:#3181C0;--warn:#C0392B;--r:14px;--font:"Archivo","Helvetica Neue",Arial,sans-serif;--body:"Figtree","Helvetica Neue",Arial,sans-serif;color-scheme:light}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:14px;display:grid;grid-template-rows:auto 1fr;height:100%;overflow:hidden}
+button,select,textarea,input{font:inherit}
+.bar{display:flex;align-items:center;gap:.6rem;padding:.6rem max(16px,env(safe-area-inset-right,0px)) .6rem max(16px,env(safe-area-inset-left,0px));background:var(--panel);border-bottom:1px solid var(--line);flex-wrap:wrap}
+.bar h1{font-family:var(--font);font-size:1rem;margin:0 .5rem 0 0;letter-spacing:-.01em;display:flex;align-items:center;gap:.5rem}
+.bar h1 img{width:28px;height:28px}
+.seg{display:inline-flex;background:var(--bg);border-radius:999px;padding:3px}
+.seg button{border:0;background:transparent;padding:.4rem .8rem;border-radius:999px;cursor:pointer;color:var(--ink-2);font-family:var(--font);font-weight:600;font-size:.85rem;transition:background-color 160ms ease,color 160ms ease}
+.seg button[aria-pressed="true"]{background:var(--ink);color:#fff}
+select{border:1px solid var(--line);border-radius:999px;padding:.4rem .8rem;background:#fff;color:var(--ink);font-family:var(--font);font-weight:500;max-width:220px}
+.btn{border:1px solid var(--line);background:#fff;color:var(--ink);padding:.45rem .9rem;border-radius:999px;cursor:pointer;font-family:var(--font);font-weight:600;font-size:.85rem;display:inline-flex;align-items:center;gap:.4rem;transition:transform 150ms ease,background-color 150ms ease}
+.btn:active{transform:scale(.97)}
+.btn.primary{background:var(--accent);color:#fff;border-color:transparent}
+.btn.on{background:var(--blue);color:#fff;border-color:transparent}
+.spacer{flex:1}
+.count{font-size:.8rem;color:var(--ink-3)}
+.main{display:grid;grid-template-columns:1fr 340px;min-height:0}
+.stage{position:relative;overflow:auto;padding:16px;display:grid;justify-items:center;align-items:start}
+.device{position:relative;background:#fff;box-shadow:0 30px 60px -30px rgba(18,21,24,.5);border-radius:6px;overflow:hidden;transform-origin:top center}
+.device.phone{border-radius:44px;border:10px solid #15191D;box-shadow:0 40px 60px -30px rgba(18,21,24,.7)}
+.device iframe{display:block;border:0;background:#fff}
+.overlay{display:none}
+.pin{position:absolute;width:28px;height:28px;margin:-14px 0 0 -14px;border-radius:50% 50% 50% 4px;background:var(--blue);color:#fff;font:700 12px/28px var(--font);text-align:center;box-shadow:0 6px 14px -4px rgba(0,0,0,.5);transform:rotate(-45deg);z-index:6;cursor:pointer;pointer-events:auto}
+.pin span{display:block;transform:rotate(45deg)}
+.pin.applied{background:var(--accent)}
+.pin.active{outline:3px solid #fff;outline-offset:1px}
+.pins{position:absolute;inset:0;pointer-events:none;z-index:6;overflow:hidden}
+.hl{position:absolute;pointer-events:none;z-index:7;border:2px solid var(--blue);background:rgba(49,129,192,.08);border-radius:4px;box-shadow:0 0 0 9999px rgba(18,21,24,.06);transition:left 80ms ease,top 80ms ease,width 80ms ease,height 80ms ease;display:none}
+.commenting .hl.show{display:block}
+.hl b{position:absolute;left:-2px;top:-26px;background:var(--blue);color:#fff;font:600 11px/20px var(--font);padding:0 7px;border-radius:5px 5px 5px 0;white-space:nowrap;max-width:360px;overflow:hidden;text-overflow:ellipsis;letter-spacing:.01em}
+.hl b i{font-style:normal;opacity:.75;margin-left:6px}
+.hl.flip b{top:auto;bottom:-26px;border-radius:0 5px 5px 5px}
+.box{position:absolute;border:2px dashed var(--blue);border-radius:4px;background:rgba(49,129,192,.06);pointer-events:auto;cursor:pointer}
+.box.applied{border-color:var(--accent);background:rgba(47,127,95,.06)}
+.box.active{border-style:solid;box-shadow:0 0 0 3px rgba(49,129,192,.25)}
+.box .pin{left:0;top:0;margin:-14px 0 0 -14px}
+.tip{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);background:#fff;border:1px solid var(--line);color:var(--ink-2);padding:.4rem .8rem;border-radius:999px;font-size:.78rem;z-index:9;display:none;white-space:nowrap;box-shadow:0 10px 20px -12px rgba(18,21,24,.4)}
+.commenting .tip{display:block}
+.c .el{font-family:var(--font);font-weight:600;color:var(--ink);font-size:.8rem}
+.c .el i{font-style:normal;color:var(--ink-3);font-weight:500}
+.composer{position:absolute;z-index:8;width:280px;background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:0 20px 40px -20px rgba(18,21,24,.5);padding:.75rem;display:grid;gap:.5rem}
+.composer textarea{min-height:90px;border:1px solid var(--line);border-radius:10px;padding:.55rem;resize:vertical}
+.composer .row{display:flex;gap:.4rem;justify-content:flex-end}
+.composer small{color:var(--ink-3)}
+.panel{background:var(--panel);border-left:1px solid var(--line);display:grid;grid-template-rows:auto 1fr;min-height:0}
+.panel header{padding:.7rem .75rem;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:.5rem}
+.panel header b{font-family:var(--font)}
+.panel header label{font-size:.8rem;color:var(--ink-2);display:flex;align-items:center;gap:.3rem}
+.list{overflow:auto;padding:.5rem}
+.c{border:1px solid var(--line);border-radius:12px;padding:.7rem .75rem;margin-bottom:.5rem;display:grid;gap:.35rem;cursor:pointer;transition:border-color 150ms ease}
+.c:hover{border-color:var(--ink-3)}
+.c.active{border-color:var(--blue)}
+.c.applied{opacity:.65}
+.c .top{display:flex;align-items:center;gap:.4rem;font-size:.78rem;color:var(--ink-3)}
+.c .n{width:22px;height:22px;border-radius:50%;background:var(--blue);color:#fff;font:700 11px/22px var(--font);text-align:center}
+.c.applied .n{background:var(--accent)}
+.c .tag{background:var(--bg);border-radius:999px;padding:.1rem .5rem;font-family:var(--font);font-weight:600}
+.c p{margin:0;white-space:pre-wrap}
+.c .reply{background:#EEF6F2;border-radius:8px;padding:.45rem .55rem;font-size:.85rem;color:#1F5C44}
+.c .acts{display:flex;gap:.4rem;justify-content:flex-end}
+.c .acts button{border:0;background:transparent;color:var(--ink-3);cursor:pointer;font-size:.78rem;padding:.2rem .3rem}
+.c .acts button:hover{color:var(--ink)}
+.empty{padding:1.5rem 1rem;color:var(--ink-3);text-align:center}
+.empty b{display:block;color:var(--ink);font-family:var(--font);margin-bottom:.3rem}
+.note{padding:.5rem 1rem;font-size:.8rem;color:var(--ink-3);border-top:1px solid var(--line)}
+.hint{position:absolute;left:50%;top:16px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:.4rem .8rem;border-radius:999px;font-size:.8rem;z-index:9;display:none;white-space:nowrap}
+.commenting .hint{display:block}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:.5rem .9rem;border-radius:999px;font-size:.85rem;opacity:0;transition:opacity 200ms ease,transform 300ms cubic-bezier(.23,1,.32,1);z-index:20;pointer-events:none}
+.toast.show{opacity:1;transform:translateX(-50%)}
+.fallback{display:none;padding:2rem;max-width:520px;background:#fff;border-radius:var(--r);border:1px solid var(--line)}
+.fallback.show{display:block}
+@media (max-width:900px){.main{grid-template-columns:1fr}.panel{border-left:0;border-top:1px solid var(--line);max-height:42vh}.bar h1 span{display:none}}
+</style>
+
+<div class="bar">
+  <h1><img src="site/assets/img/stamp-logo.png" alt=""><span>Livewell Passport review</span></h1>
+  <div class="seg" role="group" aria-label="Device">
+    <button type="button" data-device="desktop" aria-pressed="true">Desktop</button>
+    <button type="button" data-device="tablet" aria-pressed="false">Tablet</button>
+    <button type="button" data-device="phone" aria-pressed="false">Phone</button>
+  </div>
+  <select id="page" aria-label="Page"></select>
+  <button type="button" class="btn" id="mode" aria-pressed="false">💬 Comment mode</button>
+  <span class="spacer"></span>
+  <span class="count" id="count"></span>
+  <a class="btn" id="openSite" href="site/index.html" target="_blank" rel="noopener">Open site ↗</a>
+</div>
+
+<div class="main">
+  <div class="stage" id="stage">
+    <div class="hint">Hover to highlight an element, click to select it and leave a note. Esc to stop.</div>
+    <div class="tip">↑ selects the parent element · ↓ goes back in · Esc exits</div>
+    <div class="device" id="device">
+      <iframe id="frame" title="Site preview" src="site/index.html" width="1440" height="900"></iframe>
+      <div class="overlay" id="overlay"></div>
+      <div class="pins" id="pins"></div>
+      <div class="hl" id="hl"><b></b></div>
+    </div>
+    <div class="fallback" id="fallback"><b>The preview could not load inside this page.</b><p>Open the site in a new tab with the button above and leave notes here by choosing the page and typing what to change.</p><button type="button" class="btn primary" id="fallbackAdd">Add a note</button></div>
+  </div>
+  <aside class="panel">
+    <header><b id="panelTitle">Notes</b><span style="display:flex;gap:.4rem;align-items:center"><label><input type="checkbox" id="showApplied"> applied</label><button type="button" class="btn" id="copy" title="Copy open notes as text">Copy notes</button></span></header>
+    <div class="list" id="list"></div>
+    <div class="note" id="who">Notes save to this page's database. Claude reads them, applies the change, and marks each one applied.</div>
+  </aside>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+(function () {
+  var PAGES = [
+    ["site/index.html", "Home"], ["site/journeys/weight-optimization.html", "Weight Optimization"], ["site/journeys/womens-wellness.html", "Women’s Wellness"],
+    ["site/journeys/mens-wellness.html", "Men’s Wellness"], ["site/journeys/longevity-and-recovery.html", "Longevity & Recovery"], ["site/journeys/hormonal-and-sexual-health.html", "Hormonal & Sexual Health"],
+    ["site/journeys/mental-and-emotional-wellness.html", "Mental & Emotional Wellness"], ["site/journeys/strength-and-performance.html", "Strength & Performance"],
+    ["site/locations.html", "Locations"], ["site/contact.html", "Start your journey (contact)"], ["site/faqs.html", "FAQs"], ["site/portal.html", "Patient portal"],
+    ["site/policies.html", "Cancellation policy"], ["site/privacy.html", "Privacy"], ["site/terms.html", "Terms"], ["site/404.html", "404"]
+  ];
+  var WIDTHS = { desktop: 1440, tablet: 834, phone: 390 };
+  var state = { device: "desktop", page: "site/index.html", mode: false, comments: [], showApplied: false, active: null, uid: null, db: null, canWrite: true };
+  var $ = function (id) { return document.getElementById(id); };
+  var frame = $("frame"), device = $("device"), stage = $("stage"), overlay = $("overlay"), pins = $("pins"), list = $("list"), sel = $("page");
+  var composer = null, scale = 1, loaded = false;
+
+  PAGES.forEach(function (p) { var o = document.createElement("option"); o.value = p[0]; o.textContent = p[1]; sel.appendChild(o); });
+
+  function toast(msg) { var t = $("toast"); t.textContent = msg; t.classList.add("show"); clearTimeout(t._h); t._h = setTimeout(function () { t.classList.remove("show"); }, 2200); }
+  function pageOf(path) { var i = path.indexOf("site/"); return i >= 0 ? path.slice(i) : path; }
+  function label(path) { var p = PAGES.filter(function (x) { return x[0] === path; })[0]; return p ? p[1] : path; }
+
+  // ---- layout: real widths, scaled to fit
+  function layout() {
+    var w = WIDTHS[state.device], avail = stage.clientWidth - 32;
+    scale = Math.min(1, avail / (w + (state.device === "phone" ? 20 : 0)));
+    frame.width = w; frame.style.width = w + "px";
+    var h = Math.max(600, Math.floor((stage.clientHeight - 32) / scale));
+    frame.height = h; frame.style.height = h + "px";
+    device.style.transform = "scale(" + scale + ")";
+    device.style.marginBottom = (-(1 - scale) * (h + 20)) + "px";
+    device.className = "device " + state.device;
+    renderPins();
+  }
+  window.addEventListener("resize", layout);
+  document.querySelectorAll("[data-device]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      state.device = b.dataset.device;
+      document.querySelectorAll("[data-device]").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      try { localStorage.setItem("lwp-review-device", state.device); } catch (e) {}
+      layout(); renderList();
+    });
+  });
+  try { var d = localStorage.getItem("lwp-review-device"); if (d && WIDTHS[d]) { state.device = d; document.querySelectorAll("[data-device]").forEach(function (x) { x.setAttribute("aria-pressed", x.dataset.device === d ? "true" : "false"); }); } } catch (e) {}
+
+  // ---- page navigation (select <-> iframe)
+  sel.addEventListener("change", function () { state.page = sel.value; frame.src = state.page; });
+  frame.addEventListener("load", function () {
+    loaded = true;
+    try {
+      var doc = frame.contentDocument; state.page = pageOf(frame.contentWindow.location.pathname); sel.value = state.page;
+      $("openSite").href = state.page;
+      frame.contentWindow.addEventListener("scroll", renderPins, { passive: true });
+      doc.documentElement.style.scrollBehavior = "auto";
+      wireFrame(doc);
+    } catch (e) { /* cross-origin: no pins, notes still work by page */ }
+    renderPins(); renderList();
+  });
+  setTimeout(function () { if (!loaded) { $("fallback").classList.add("show"); device.style.display = "none"; } }, 6000);
+
+  // ---- comment mode
+  function setMode(on) {
+    state.mode = on; document.body.classList.toggle("commenting", on);
+    try { frame.contentDocument.documentElement.style.cursor = on ? "crosshair" : ""; } catch (e) {}
+    $("mode").setAttribute("aria-pressed", on ? "true" : "false"); $("mode").classList.toggle("on", on);
+    if (!on) { closeComposer(); showHl(null); }
+  }
+  $("mode").addEventListener("click", function () { setMode(!state.mode); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") { setMode(false); } });
+
+  // ---- element inspector: hover highlights, click selects, arrows walk the tree
+  var hl = $("hl"), hover = null, hoverEl = null;
+  function describe(el) {
+    var tag = el.tagName.toLowerCase();
+    var cls = (typeof el.className === "string" && el.className.trim()) ? "." + el.className.trim().split(/\s+/)[0] : "";
+    var txt = (el.innerText || el.getAttribute("alt") || el.getAttribute("aria-label") || "").trim().replace(/\s+/g, " ").slice(0, 48);
+    return { tag: tag, label: tag + cls, snippet: txt };
+  }
+  function selectorFor(el) {
+    var doc = el.ownerDocument, parts = [];
+    while (el && el.nodeType === 1 && el !== doc.body && parts.length < 7) {
+      if (el.id) { parts.unshift("#" + CSS.escape(el.id)); break; }
+      var tag = el.tagName.toLowerCase(), p = el.parentElement, i = 1;
+      if (p) { var sib = p.children; for (var k = 0; k < sib.length; k++) { if (sib[k] === el) break; if (sib[k].tagName === el.tagName) i++; } }
+      parts.unshift(tag + ":nth-of-type(" + i + ")"); el = p;
+    }
+    return parts.join(" > ");
+  }
+  function sectionOf(el) {
+    var sec = el.closest("section, header, footer, .mega, nav"); var h = sec && sec.querySelector("h1, h2, h3");
+    return (sec && sec.id ? "#" + sec.id + " " : "") + (h ? h.textContent.trim().replace(/\s+/g, " ").slice(0, 50) : "");
+  }
+  function rectOf(el) { var r = el.getBoundingClientRect(), sy = frame.contentWindow.scrollY; return { x: r.left, y: r.top + sy, w: r.width, h: r.height }; }
+  function showHl(el) {
+    hoverEl = el;
+    if (!el) { hl.classList.remove("show"); return; }
+    var r = rectOf(el), sy = frame.contentWindow.scrollY, d = describe(el);
+    hl.style.left = r.x + "px"; hl.style.top = (r.y - sy) + "px"; hl.style.width = r.w + "px"; hl.style.height = r.h + "px";
+    hl.classList.toggle("flip", r.y - sy < 30);
+    hl.querySelector("b").innerHTML = escapeHtml(d.label) + (d.snippet ? "<i>" + escapeHtml("“" + d.snippet + "”") + "</i>" : "");
+    hl.classList.add("show");
+  }
+  function wireFrame(doc) {
+    var win = doc.defaultView;
+    doc.addEventListener("mousemove", function (e) { if (!state.mode || composer) return; var el = elementAt(e.clientX, e.clientY); if (el !== hoverEl) showHl(el); }, true);
+    doc.addEventListener("mouseleave", function () { if (state.mode && !composer) showHl(null); }, true);
+    doc.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") { setMode(false); return; }
+      if (!state.mode || composer || !hoverEl) return;
+      if (e.key === "ArrowUp" && hoverEl.parentElement && hoverEl.parentElement !== doc.body) { e.preventDefault(); showHl(hoverEl.parentElement); }
+      if (e.key === "ArrowDown" && hoverEl.firstElementChild) { e.preventDefault(); showHl(hoverEl.firstElementChild); }
+    }, true);
+    // in comment mode a click selects instead of navigating
+    doc.addEventListener("click", function (e) {
+      if (!state.mode) return;
+      e.preventDefault(); e.stopPropagation();
+      if (composer) { closeComposer(); return; }
+      var el = hoverEl || elementAt(e.clientX, e.clientY);
+      var sy = win.scrollY, draft = { x: Math.round(e.clientX), y: Math.round(e.clientY + sy), anchor: "" };
+      if (el) { var d = describe(el), rr = rectOf(el); draft.selector = selectorFor(el); draft.el = d.label; draft.snippet = d.snippet; draft.anchor = sectionOf(el); draft.x = Math.round(rr.x); draft.y = Math.round(rr.y); draft.w = Math.round(rr.w); draft.h = Math.round(rr.h); }
+      openComposer(draft, e.clientX * scale, e.clientY * scale);
+    }, true);
+    // touch: a tap selects in comment mode, scrolling stays native
+    var t0 = null;
+    doc.addEventListener("touchstart", function (e) { t0 = { x: e.touches[0].clientX, y: e.touches[0].clientY, t: Date.now() }; }, { passive: true, capture: true });
+    doc.addEventListener("touchend", function (e) {
+      if (!state.mode || !t0) return; var t = e.changedTouches[0];
+      if (Math.abs(t.clientX - t0.x) > 8 || Math.abs(t.clientY - t0.y) > 8 || Date.now() - t0.t > 500) return;
+      e.preventDefault(); var el = elementAt(t.clientX, t.clientY); showHl(el);
+      var sy = win.scrollY, draft = { x: Math.round(t.clientX), y: Math.round(t.clientY + sy), anchor: "" };
+      if (el) { var d = describe(el), rr = rectOf(el); draft.selector = selectorFor(el); draft.el = d.label; draft.snippet = d.snippet; draft.anchor = sectionOf(el); draft.x = Math.round(rr.x); draft.y = Math.round(rr.y); draft.w = Math.round(rr.w); draft.h = Math.round(rr.h); }
+      openComposer(draft, t.clientX * scale, t.clientY * scale);
+    }, { passive: false, capture: true });
+  }
+  function elementAt(cx, cy) {
+    try {
+      var el = frame.contentDocument.elementFromPoint(cx, cy);
+      if (!el || el === frame.contentDocument.documentElement || el === frame.contentDocument.body) return null;
+      while (el && (el.namespaceURI === "http://www.w3.org/2000/svg" && el.tagName.toLowerCase() !== "svg")) el = el.parentNode;
+      if (el && el.tagName.toLowerCase() === "svg" && el.parentElement && el.parentElement.children.length === 1) el = el.parentElement;
+      return el;
+    } catch (e) { return null; }
+  }
+
+  function openComposer(draft, px, py) {
+    closeComposer();
+    composer = document.createElement("div"); composer.className = "composer";
+    composer.innerHTML = '<small>' + (draft.el ? "<b>" + escapeHtml(draft.el) + "</b>" + (draft.snippet ? " “" + escapeHtml(draft.snippet) + "”" : "") + "<br>" : "") + (draft.anchor ? "In: " + escapeHtml(draft.anchor) : label(state.page)) + ' · ' + state.device + '</small>' +
+      '<textarea placeholder="What should change here?" aria-label="Note"></textarea>' +
+      '<div class="row"><button type="button" class="btn" data-cancel>Cancel</button><button type="button" class="btn primary" data-save>Save note</button></div>';
+    var left = Math.min(px, device.clientWidth * scale - 300), top = py + 10;
+    composer.style.left = Math.max(0, left) + "px"; composer.style.top = top + "px";
+    stage.appendChild(composer);
+    // position relative to stage: device is centered, so offset by its left
+    var dr = device.getBoundingClientRect(), sr = stage.getBoundingClientRect();
+    composer.style.left = Math.max(8, dr.left - sr.left + stage.scrollLeft + left) + "px";
+    composer.style.top = (dr.top - sr.top + stage.scrollTop + top) + "px";
+    var ta = composer.querySelector("textarea"); ta.focus();
+    composer.querySelector("[data-cancel]").onclick = closeComposer;
+    composer.querySelector("[data-save]").onclick = function () {
+      var text = ta.value.trim(); if (!text) { ta.focus(); return; }
+      save({ page: state.page, device: state.device, x: draft.x, y: draft.y, w: draft.w || 0, h: draft.h || 0, selector: draft.selector || "", el: draft.el || "", snippet: draft.snippet || "", anchor: draft.anchor || "", text: text, status: "open", created: new Date().toISOString(), by: state.uid || "" });
+      closeComposer();
+    };
+    ta.addEventListener("keydown", function (e) { if ((e.metaKey || e.ctrlKey) && e.key === "Enter") composer.querySelector("[data-save]").click(); });
+  }
+  function closeComposer() { if (composer) { composer.remove(); composer = null; } }
+  $("fallbackAdd").addEventListener("click", function () { openComposer({ x: 0, y: 0, anchor: "" }, 20, 20); });
+
+  // ---- storage
+  var local = [];
+  function save(c) {
+    if (state.db) {
+      state.db.collection("comments").add(c).then(function () { toast("Note saved"); }).catch(function (e) {
+        if (e && e.code === "invalid_argument") { state.canWrite = false; toast("You don’t have permission to write notes here"); }
+        else toast("Could not save. Try again.");
+      });
+    } else { c.id = "local-" + Date.now(); local.push(c); state.comments = local.slice(); toast("Saved on this device only (database unavailable)"); renderPins(); renderList(); }
+  }
+  function setStatus(c, status) {
+    if (!state.db) { c.status = status; renderPins(); renderList(); return; }
+    state.db.collection("comments").doc(c.id).update({ status: status }).catch(function () { toast("Could not update"); });
+  }
+  function remove(c) {
+    if (!state.db) { local = local.filter(function (x) { return x !== c; }); state.comments = local.slice(); renderPins(); renderList(); return; }
+    state.db.collection("comments").doc(c.id).delete().catch(function () { toast("Could not delete"); });
+  }
+
+  // ---- render
+  function escapeHtml(s) { return String(s).replace(/[&<>"]/g, function (ch) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[ch]; }); }
+  function visible() { return state.comments.filter(function (c) { return c.page === state.page && (state.showApplied || c.status !== "applied"); }); }
+  function numberOf(c) { return state.comments.indexOf(c) + 1; }
+  function renderPins() {
+    pins.innerHTML = "";
+    var sy = 0; try { sy = frame.contentWindow.scrollY; } catch (e) { return; }
+    visible().filter(function (c) { return c.device === state.device && c.x !== undefined; }).forEach(function (c) {
+      var x = c.x, y = c.y, w = c.w || 0, h = c.h || 0;
+      if (c.selector) { try { var el = frame.contentDocument.querySelector(c.selector); if (el) { var r = rectOf(el); x = r.x; y = r.y; w = r.w; h = r.h; } } catch (e) {} }
+      var p = document.createElement("div");
+      p.title = c.text;
+      p.onclick = function (e) { e.stopPropagation(); state.active = c.id; renderList(); renderPins(); var li = list.querySelector('[data-id="' + c.id + '"]'); li && li.scrollIntoView({ block: "nearest" }); };
+      if (w && h) {
+        p.className = "box " + (c.status === "applied" ? "applied" : "") + (state.active === c.id ? " active" : "");
+        p.style.left = x + "px"; p.style.top = (y - sy) + "px"; p.style.width = w + "px"; p.style.height = h + "px";
+        p.innerHTML = '<div class="pin ' + (c.status === "applied" ? "applied" : "") + '"><span>' + numberOf(c) + '</span></div>';
+      } else {
+        p.className = "pin " + (c.status === "applied" ? "applied" : "") + (state.active === c.id ? " active" : "");
+        p.style.left = x + "px"; p.style.top = (y - sy) + "px"; p.innerHTML = "<span>" + numberOf(c) + "</span>";
+      }
+      pins.appendChild(p);
+    });
+  }
+  function renderList() {
+    var items = visible();
+    $("count").textContent = state.comments.filter(function (c) { return c.status !== "applied"; }).length + " open · " + state.comments.filter(function (c) { return c.status === "applied"; }).length + " applied";
+    $("panelTitle").textContent = "Notes · " + label(state.page);
+    if (!items.length) { list.innerHTML = '<div class="empty"><b>No notes on this page yet</b>Turn on Comment mode and click the spot you want changed.</div>'; return; }
+    list.innerHTML = "";
+    items.forEach(function (c) {
+      var d = document.createElement("div"); d.className = "c " + (c.status === "applied" ? "applied" : "") + (state.active === c.id ? " active" : ""); d.dataset.id = c.id;
+      d.innerHTML = '<div class="top"><span class="n">' + numberOf(c) + '</span><span class="tag">' + c.device + '</span><span>' + escapeHtml(c.anchor || "") + '</span></div>' +
+        (c.el ? '<div class="el">' + escapeHtml(c.el) + (c.snippet ? ' <i>“' + escapeHtml(c.snippet) + '”</i>' : '') + '</div>' : '') +
+        '<p>' + escapeHtml(c.text) + '</p>' + (c.reply ? '<div class="reply">' + escapeHtml(c.reply) + '</div>' : '') +
+        '<div class="acts">' + (c.status === "applied" ? '<button type="button" data-reopen>Reopen</button>' : '<button type="button" data-done>Mark applied</button>') + '<button type="button" data-del>Delete</button></div>';
+      d.onclick = function () {
+        state.active = c.id; renderList(); renderPins();
+        if (c.device !== state.device) { document.querySelector('[data-device="' + c.device + '"]').click(); }
+        try { var target = c.selector && frame.contentDocument.querySelector(c.selector); var top = target ? rectOf(target).y : c.y; frame.contentWindow.scrollTo({ top: Math.max(0, top - 160), behavior: "smooth" }); } catch (e) {}
+      };
+      d.querySelector("[data-del]").onclick = function (e) { e.stopPropagation(); remove(c); };
+      var done = d.querySelector("[data-done]"); if (done) done.onclick = function (e) { e.stopPropagation(); setStatus(c, "applied"); };
+      var re = d.querySelector("[data-reopen]"); if (re) re.onclick = function (e) { e.stopPropagation(); setStatus(c, "open"); };
+      list.appendChild(d);
+    });
+  }
+  function notesAsText(all) {
+    var items = state.comments.filter(function (c) { return all || c.status !== "applied"; });
+    if (!items.length) return "";
+    var byPage = {};
+    items.forEach(function (c) { (byPage[c.page] = byPage[c.page] || []).push(c); });
+    return Object.keys(byPage).map(function (pg) {
+      return "## " + label(pg) + "\n" + byPage[pg].map(function (c) {
+        return "- [" + numberOf(c) + "] (" + c.device + (c.el ? ", " + c.el + (c.snippet ? ' "' + c.snippet + '"' : "") : "") + (c.anchor ? ", in " + c.anchor : "") + ") " + c.text + (c.status === "applied" ? "  [applied]" : "");
+      }).join("\n");
+    }).join("\n\n");
+  }
+  $("copy").addEventListener("click", function () {
+    var text = notesAsText(false) || notesAsText(true);
+    if (!text) { toast("No notes to copy yet"); return; }
+    var done = function () { toast("Notes copied. Paste them in the chat."); };
+    var fallback = function () {
+      var ta = document.createElement("textarea"); ta.value = text; ta.style.cssText = "position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(90vw,640px);height:60vh;z-index:50;padding:1rem;border-radius:12px;border:1px solid var(--line);font:13px/1.5 ui-monospace,monospace";
+      document.body.appendChild(ta); ta.select(); toast("Select all and copy, then click away");
+      ta.addEventListener("blur", function () { ta.remove(); });
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, fallback); else fallback();
+  });
+  $("showApplied").addEventListener("change", function () { state.showApplied = $("showApplied").checked; renderPins(); renderList(); });
+
+  layout(); renderList();
+
+  // ---- capabilities light up when the viewer answers
+  if (window.claude && window.claude.use) {
+    window.claude.use("user").then(function (u) { if (u) u.id().then(function (id) { state.uid = id; }); });
+    window.claude.use("db").then(function (db) {
+      if (!db) { $("who").textContent = "Database unavailable in this view. Notes stay on this device."; return; }
+      state.db = db;
+      db.collection("comments").orderBy("created").onSnapshot(function (snap) {
+        state.comments = snap.docs.map(function (doc) { var o = doc.data(); o.id = doc.id; return o; });
+        renderPins(); renderList();
+      }, function (e) { $("who").textContent = "Notes could not be loaded (" + e.code + ")."; });
+    });
+  }
+})();
+</script>
