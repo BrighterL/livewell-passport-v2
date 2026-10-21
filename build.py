@@ -373,9 +373,10 @@ def reviews_section():
         name, date, text = r
         initials = "".join(w[0] for w in name.replace("’", "").split()[:2]).upper()
         return f'''<article class="rv" style="--c:{cols[i % len(cols)]}"><div class="who"><span class="av" aria-hidden="true">{initials}</span><div><b>{name}</b><span>{date}</span></div>{GOOGLE_G}</div>{stars()}<p>{text}</p><span class="verified"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 2.1 3.1-.5 1 3 2.9 1.3-.5 3.1 2.1 2.4-2.1 2.4.5 3.1-2.9 1.3-1 3-3.1-.5L12 22l-2.4-2.1-3.1.5-1-3-2.9-1.3.5-3.1L1 10.6l2.1-2.4-.5-3.1 2.9-1.3 1-3 3.1.5z M10.5 15.5l-3-3 1.4-1.4 1.6 1.6 4.6-4.6 1.4 1.4z"/></svg>Posted on Google</span></article>'''
-    half = (len(REVIEWS) + 1) // 2
-    row1 = "".join(card(i, r) for i, r in enumerate(REVIEWS[:half]))
-    row2 = "".join(card(i + half, r) for i, r in enumerate(REVIEWS[half:]))
+    n = len(REVIEWS); a, b = (n + 2) // 3, 2 * ((n + 2) // 3)
+    row1 = "".join(card(i, r) for i, r in enumerate(REVIEWS[:a]))
+    row2 = "".join(card(i + a, r) for i, r in enumerate(REVIEWS[a:b]))
+    row3 = "".join(card(i + b, r) for i, r in enumerate(REVIEWS[b:]))
     return f'''<section class="pad-l reviews bg-silver textured" id="reviews">
   <div class="wrap">
     <div class="reviews-head" data-reveal>
@@ -384,8 +385,9 @@ def reviews_section():
     </div>
   </div>
   <div class="wrap">
-    <div class="marquee-wrap"><div class="marquee" style="--dur:110s">{row1}{row1}</div></div>
-    <div class="marquee-wrap"><div class="marquee rev" style="--dur:130s">{row2}{row2}</div></div>
+    <div class="marquee-wrap"><div class="marquee" style="--dur:80s">{row1}{row1}</div></div>
+    <div class="marquee-wrap"><div class="marquee rev" style="--dur:95s">{row2}{row2}</div></div>
+    <div class="marquee-wrap"><div class="marquee" style="--dur:88s">{row3}{row3}</div></div>
   </div>
 </section>'''
 
@@ -602,7 +604,7 @@ def home():
   <div class="wrap values" data-reveal>
     <div class="value">{tile("shield-check")}<div><strong>Covered by insurance</strong><span>Many of our primary care services are covered by insurance.</span></div></div>
     <div class="value">{tile("test-tube")}<div><strong>Root-cause lab work</strong><span>Deep-dive diagnostics uncover what your body truly needs.</span></div></div>
-    <div class="value">{tile("videocamera")}<div><strong>In person or virtual</strong><span>Two locations plus a secure telehealth platform, from anywhere.</span></div></div>
+    <div class="value">{tile("videocamera")}<div><strong>In person or virtual</strong><span>One office in Midlothian plus secure telehealth across Virginia and Florida.</span></div></div>
     <div class="value">{tile("stethoscope")}<div><strong>Time to listen</strong><span>Licensed providers and health coaches walk beside you.</span></div></div>
   </div>
 </section>
@@ -618,6 +620,8 @@ def home():
     </div>
   </div>
 </section>
+
+{telehealth_section()}
 
 <section class="pad-m bg-silver textured">
   <div class="wrap">
@@ -699,8 +703,6 @@ def home():
     <p style="margin-top:1.5rem"><a class="link-arrow" href="{INTRO_VIDEO}" target="_blank" rel="noopener">Play video: Livewell Passport {icon("arrow")}</a></p>
   </div>
 </section>
-
-{telehealth_section()}
 
 <section class="pad-xl textured">
   <div class="wrap map-wrap" data-reveal>
