@@ -773,3 +773,49 @@ html,body{overflow-x:clip;max-width:100%}
 .pin.tele::before,.pin.tele::after{background:#7E9DB8}
 .field input:focus,.field select:focus,.field textarea:focus{border-color:#6E9CC8;box-shadow:0 0 0 3px #E4EDF5}
 .check input{accent-color:#6E9CC8}
+
+
+/* ---------- v3.8: manifesto with life ---------- */
+.manifesto{position:relative;overflow:hidden}
+.manifesto::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(60% 50% at 15% 20%,rgba(169,198,224,.45),transparent 70%),radial-gradient(45% 40% at 85% 75%,rgba(110,156,200,.28),transparent 70%)}
+.manifesto-wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,5vw,5rem);align-items:center}
+.manifesto .big{margin-bottom:1.5rem}
+.manifesto-grid{margin-top:1.5rem;grid-template-columns:1fr}
+.manifesto-grid .side{max-width:40ch}
+.m-visual{position:relative;aspect-ratio:5/6;min-height:420px}
+.route{position:absolute;inset:0;width:100%;height:100%}
+.route-line{stroke:var(--green-deep);stroke-width:2.5;stroke-dasharray:10 10;opacity:.7}
+.route-dot{fill:var(--green-deep)}
+.route-dot.end{fill:var(--blue)}
+.polaroid{position:absolute;margin:0;width:54%;background:#fff;padding:10px 10px 0;border-radius:14px;box-shadow:var(--shadow);transform:rotate(var(--r));transition:transform 500ms var(--ease-out),box-shadow 500ms var(--ease-out)}
+.polaroid img{aspect-ratio:4/4.6;object-fit:cover;border-radius:8px;width:100%}
+.polaroid figcaption{font-family:var(--font-display);font-weight:600;font-size:.95rem;letter-spacing:-.01em;padding:.7rem .2rem .8rem;color:var(--ink)}
+.polaroid .pstamp{position:absolute;right:-14px;top:-14px;width:84px;height:84px;color:var(--blue);mix-blend-mode:multiply;opacity:.9;transform:rotate(12deg)}
+.polaroid .pstamp svg{width:100%;height:100%;overflow:visible}
+.polaroid .pstamp text{font-family:var(--font-display);font-variation-settings:"wdth" 76;font-weight:700;letter-spacing:.14em;fill:currentColor}
+.polaroid:hover{transform:rotate(0deg) scale(1.04);z-index:3;box-shadow:0 40px 60px -28px rgba(18,21,24,.5)}
+.p1{--r:-7deg;left:0;top:2%;z-index:1}
+.p2{--r:5deg;right:0;top:26%;z-index:2}
+.p3{--r:-3deg;left:12%;bottom:0;z-index:1}
+@supports (animation-timeline:view()){
+  .p1{animation:drift1 linear both;animation-timeline:view();animation-range:entry 0% exit 100%}
+  .p2{animation:drift2 linear both;animation-timeline:view();animation-range:entry 0% exit 100%}
+  .p3{animation:drift3 linear both;animation-timeline:view();animation-range:entry 0% exit 100%}
+  @keyframes drift1{from{transform:rotate(-10deg) translateY(40px)}to{transform:rotate(-5deg) translateY(-40px)}}
+  @keyframes drift2{from{transform:rotate(8deg) translateY(90px)}to{transform:rotate(3deg) translateY(-70px)}}
+  @keyframes drift3{from{transform:rotate(-5deg) translateY(60px)}to{transform:rotate(-1deg) translateY(-30px)}}
+  .polaroid:hover{animation-play-state:paused}
+  .route-line{stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw linear both;animation-timeline:view();animation-range:entry 20% cover 70%}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  @media (prefers-reduced-motion:reduce){.p1,.p2,.p3,.route-line{animation:none}.route-line{stroke-dashoffset:0;stroke-dasharray:10 10}}
+}
+@media (max-width:900px){.manifesto-wrap{grid-template-columns:1fr}.m-visual{aspect-ratio:4/3;min-height:340px;max-width:520px}.polaroid{width:46%}}
+.polaroid{width:46%}
+.p1{left:2%;top:0}
+.p2{right:0;top:22%}
+.p3{left:18%;bottom:2%}
+.route{z-index:0}
+.route-line{stroke:#4F82B5;stroke-width:3;opacity:.85}
+.polaroid{z-index:1}
+.m-visual{aspect-ratio:5/6.2}

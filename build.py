@@ -612,11 +612,19 @@ def home():
 {reviews_section()}
 
 <section class="pad-xl manifesto">
-  <div class="wrap">
-    <p class="big">{manifesto}</p>
-    <div class="manifesto-grid" data-reveal>
-      <p>At Livewell Passport, your story comes first, because true healing begins when someone truly listens. Here, primary care and functional medicine come together to offer more than just symptom relief. We take the time to understand what others overlook, then map a path that leads to lasting change.</p>
-      <p class="side">This isn’t assembly-line care. It’s thoughtful, science-backed guidance, delivered with heart, grounded in trust, and personalized for every step of your journey.</p>
+  <div class="wrap manifesto-wrap">
+    <div class="m-copy">
+      <p class="big">{manifesto}</p>
+      <div class="manifesto-grid" data-reveal>
+        <p>At Livewell Passport, your story comes first, because true healing begins when someone truly listens. Here, primary care and functional medicine come together to offer more than just symptom relief. We take the time to understand what others overlook, then map a path that leads to lasting change.</p>
+        <p class="side">This isn’t assembly-line care. It’s thoughtful, science-backed guidance, delivered with heart, grounded in trust, and personalized for every step of your journey.</p>
+      </div>
+    </div>
+    <div class="m-visual" aria-hidden="true">
+      <svg class="route" viewBox="0 0 520 620" fill="none"><path class="route-line" d="M60 90 C 40 220, 300 180, 330 300 S 120 470, 300 560"/><circle cx="60" cy="90" r="7" class="route-dot"/><circle cx="300" cy="560" r="7" class="route-dot end"/></svg>
+      <figure class="polaroid p1"><img src="assets/img/about.jpg" alt="" loading="lazy">{stamp("YOUR STORY", "LIVEWELL · PASSPORT", "HEARD", cls="pstamp")}<figcaption>Someone truly listens</figcaption></figure>
+      <figure class="polaroid p2"><img src="assets/img/mens.jpg" alt="" loading="lazy">{stamp("ROOT CAUSE", "LIVEWELL · PASSPORT", "FOUND", cls="pstamp")}<figcaption>We map the path</figcaption></figure>
+      <figure class="polaroid p3"><img src="assets/img/longevity.jpg" alt="" loading="lazy">{stamp("LASTING", "LIVEWELL · PASSPORT", "CHANGE", cls="pstamp")}<figcaption>Change that lasts</figcaption></figure>
     </div>
   </div>
 </section>
