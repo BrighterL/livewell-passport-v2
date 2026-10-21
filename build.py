@@ -363,12 +363,12 @@ def header(depth=0, current=""):
 </div>
 <main id="main">'''
 
-GOOGLE_G = '<svg class="g" viewBox="0 0 48 48" aria-label="Google"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>'
+GOOGLE_G = '<svg class="g" viewBox="0 0 48 48" aria-label="Google"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#6E9CC8" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>'
 STAR = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.7.8-4.9 4.6 1.3 6.6L12 17.3l-6 3.3 1.3-6.6L2.4 9.4l6.7-.8z"/></svg>'
 def stars(): return '<span class="stars" aria-label="5 out of 5 stars">' + STAR * 5 + '</span>'
 
 def reviews_section():
-    cols = ["#3181C0", "#2F7F5F", "#1F8F9A", "#4F9BD9", "#EA4335", "#FBBC05", "#34A853"]
+    cols = ["#3181C0", "#6E9CC8", "#7E9DB8", "#4F9BD9", "#4F82B5", "#A9C6E0", "#5B8FC4"]
     def card(i, r):
         name, date, text = r
         initials = "".join(w[0] for w in name.replace("’", "").split()[:2]).upper()
@@ -422,8 +422,8 @@ def machine_svg():
   <rect class="scan" x="98" y="100" width="28" height="2" fill="#9CCBEF" opacity=".9"/>
   <g transform="translate(138 106)">
     <rect width="60" height="6" rx="3" fill="#24364A"/><rect class="screen-bar" width="52" height="6" rx="3" fill="#3181C0"/>
-    <rect y="14" width="60" height="6" rx="3" fill="#24364A"/><rect class="screen-bar" y="14" width="34" height="6" rx="3" fill="#2F7F5F"/>
-    <rect y="28" width="60" height="6" rx="3" fill="#24364A"/><rect class="screen-bar" y="28" width="46" height="6" rx="3" fill="#8FD3B4"/>
+    <rect y="14" width="60" height="6" rx="3" fill="#24364A"/><rect class="screen-bar" y="14" width="34" height="6" rx="3" fill="#6E9CC8"/>
+    <rect y="28" width="60" height="6" rx="3" fill="#24364A"/><rect class="screen-bar" y="28" width="46" height="6" rx="3" fill="#A9C6E0"/>
   </g>
   <circle cx="184" cy="156" r="10" fill="none" stroke="#24364A" stroke-width="3"/>
   <circle class="ring" cx="184" cy="156" r="10" fill="none" stroke="#9CCBEF" stroke-width="3" stroke-linecap="round" transform="rotate(-90 184 156)"/>
@@ -450,8 +450,8 @@ def phone_mock():
       <div><h5>Your body composition report</h5><div class="meta">Livewell Passport · Sample</div></div>
       <div class="big"><span data-count="191.8">191.8</span><small>lb weight</small></div>
       <div class="row"><span>Skeletal muscle mass</span><b>105.8 lb</b><div class="bar"><i style="--w:78%;--c:#3181C0"></i></div></div>
-      <div class="row"><span>Body fat mass</span><b>11.7 lb</b><div class="bar"><i style="--w:22%;--c:#2F7F5F"></i></div></div>
-      <div class="row"><span>Total body water</span><b>113.6 lb</b><div class="bar"><i style="--w:66%;--c:#1F8F9A"></i></div></div>
+      <div class="row"><span>Body fat mass</span><b>11.7 lb</b><div class="bar"><i style="--w:22%;--c:#6E9CC8"></i></div></div>
+      <div class="row"><span>Total body water</span><b>113.6 lb</b><div class="bar"><i style="--w:66%;--c:#7E9DB8"></i></div></div>
       <div class="row"><span>Percent body fat</span><b>6.1 %</b><div class="bar"><i style="--w:18%;--c:#4F9BD9"></i></div></div>
       <div class="seg">
         <div><b>Left arm</b>11.46 lb<b>Left leg</b>27.89 lb</div>

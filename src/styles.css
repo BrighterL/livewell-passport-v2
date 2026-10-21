@@ -5,7 +5,7 @@
 :root{
   --bg:#F4F5F7; --bg-2:#E8EBEF; --silver:#C8CED5; --silver-2:#9AA4AE; --line:#D4D9DF; --line-2:#E2E6EA;
   --ink:#121518; --ink-2:#4A535C; --ink-3:#6F7984;
-  --green:#2F7F5F; --green-deep:#246A4E; --green-dark:#171B1F; --green-dark-2:#22272C; --green-tint:#E9ECF0;
+  --green:#6E9CC8; --green-deep:#4F82B5; --green-dark:#171B1F; --green-dark-2:#22272C; --green-tint:#E4EDF5;
   --graphite:#171B1F; --graphite-2:#22272C;
   --blue:#3181C0; --blue-tint:#E1EEF8;
   --on-dark:#F1F3F5; --on-dark-2:#A7B0B9; --on-dark-line:rgba(255,255,255,.12);
@@ -519,8 +519,8 @@ html,body{overflow-x:clip;max-width:100%}
 :where(.value,.facts li,.benefit,.pep-grid>div,.rcard,.mega-list a,.stack-card):hover .ico svg{color:var(--c)}
 :where(.value,.facts li,.benefit,.pep-grid>div,.rcard,.mega-list a,.stack-card):hover .ico svg [opacity]{stroke:var(--c);opacity:.55}
 .ico[data-hue="blue"]{--c:#3181C0}
-.ico[data-hue="green"]{--c:#2F7F5F}
-.ico[data-hue="teal"]{--c:#1F8F9A}
+.ico[data-hue="green"]{--c:#6E9CC8}
+.ico[data-hue="teal"]{--c:#7E9DB8}
 .ico[data-hue="sky"]{--c:#4F9BD9}
 
 .tech{display:grid;grid-template-columns:.9fr 1.1fr .9fr;gap:clamp(1.5rem,4vw,4rem);align-items:center;margin-top:3rem}
@@ -591,8 +591,8 @@ html,body{overflow-x:clip;max-width:100%}
 
 /* ---------- v3.2 review notes: route cards with diagonal photo, peptide photo panel ---------- */
 .stack-card{--hue:#3181C0;grid-template-columns:1.05fr 1fr;gap:0;padding:0;background:#fff;align-items:stretch}
-.stack-card:nth-child(2){background:#fff;--hue:#2F7F5F}
-.stack-card:nth-child(3){background:var(--graphite);--hue:#1F8F9A}
+.stack-card:nth-child(2){background:#fff;--hue:#6E9CC8}
+.stack-card:nth-child(3){background:var(--graphite);--hue:#7E9DB8}
 .stack-card .body{position:relative;padding:clamp(1.75rem,4vw,3.5rem);display:grid;align-content:center;gap:.25rem;background:linear-gradient(135deg,#fff 0%,#F3F5F7 60%,#E8ECF0 100%)}
 .stack-card:nth-child(3) .body{background:linear-gradient(135deg,#22272C 0%,#171B1F 70%)}
 .stack-card .body::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(180deg,var(--hue),color-mix(in srgb,var(--hue) 40%,#fff))}
@@ -601,7 +601,7 @@ html,body{overflow-x:clip;max-width:100%}
 .stack-card .stop::before{content:"";width:28px;height:2px;background:var(--hue)}
 .stack-card .no{color:var(--hue);text-shadow:0 18px 40px color-mix(in srgb,var(--hue) 35%,transparent);margin-bottom:.5rem;position:relative}
 .stack-card .no::after{content:"";position:absolute;left:-.1em;bottom:.05em;width:1.6em;height:.28em;background:color-mix(in srgb,var(--hue) 18%,transparent);border-radius:999px;z-index:-1}
-.stack-card:nth-child(3) .no{color:#8EC9D0}
+.stack-card:nth-child(3) .no{color:#A9C6E0}
 .stack-card .ph{aspect-ratio:auto;max-height:none;border-radius:0;position:relative;min-height:380px;clip-path:polygon(14% 0,100% 0,100% 100%,0 100%)}
 .stack-card .ph::before{content:"";position:absolute;left:0;top:0;bottom:0;width:14%;background:linear-gradient(90deg,var(--hue),transparent);opacity:.9;clip-path:polygon(0 0,100% 0,0 100%);z-index:1;mix-blend-mode:multiply}
 .stack-card .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,21,24,.25),transparent 40%)}
@@ -666,7 +666,7 @@ html,body{overflow-x:clip;max-width:100%}
 .rv .who .g{width:22px;height:22px}
 .rv p{margin:0;color:var(--ink-2);font-size:.95rem;line-height:1.5;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
 .rv .verified{display:flex;align-items:center;gap:.4rem;font-size:.75rem;color:var(--ink-3);font-family:var(--font-display);font-weight:600}
-.rv .verified svg{width:14px;height:14px;fill:#34A853}
+.rv .verified svg{width:14px;height:14px;fill:#6E9CC8}
 @media (max-width:560px){.rv{flex-basis:280px}}
 .rv .who .av{color:#fff;font-size:.9rem;letter-spacing:.02em}
 
@@ -689,7 +689,7 @@ html,body{overflow-x:clip;max-width:100%}
 .tele-device{display:grid;gap:1rem}
 .call{position:relative;border-radius:24px;background:#0F1316;padding:14px;box-shadow:var(--shadow);color:#fff;aspect-ratio:16/10;display:grid;grid-template-rows:auto 1fr;gap:10px;overflow:hidden}
 .call-top{display:flex;align-items:center;gap:.6rem;font-family:var(--font-display);font-size:.8rem;color:#C9D1D9}
-.call-top .dot{width:8px;height:8px;border-radius:50%;background:#34A853;box-shadow:0 0 0 0 rgba(52,168,83,.6);animation:live 1.8s ease-out infinite}
+.call-top .dot{width:8px;height:8px;border-radius:50%;background:#6E9CC8;box-shadow:0 0 0 0 rgba(52,168,83,.6);animation:live 1.8s ease-out infinite}
 @keyframes live{to{box-shadow:0 0 0 10px rgba(52,168,83,0)}}
 .call-top .lock{margin-left:auto;display:inline-flex;align-items:center;gap:.3rem;background:rgba(255,255,255,.08);padding:.25rem .6rem;border-radius:999px;font-weight:600}
 .call-top .lock svg{width:14px;height:14px}
@@ -719,7 +719,7 @@ html,body{overflow-x:clip;max-width:100%}
 .s2 .name{position:absolute;left:10px;bottom:8px;background:rgba(0,0,0,.55);padding:3px 8px;border-radius:999px;font-size:11px;font-family:var(--font-display);font-weight:600}
 .s2 .name em{font-style:normal;color:#9CCBEF}
 .s2 .wave{position:absolute;right:12px;top:12px;display:flex;gap:3px;align-items:flex-end;height:18px}
-.s2 .wave i{width:3px;background:#34A853;border-radius:2px;animation:wave 1s ease-in-out infinite}
+.s2 .wave i{width:3px;background:#6E9CC8;border-radius:2px;animation:wave 1s ease-in-out infinite}
 .s2 .wave i:nth-child(2){animation-delay:.15s}.s2 .wave i:nth-child(3){animation-delay:.3s}.s2 .wave i:nth-child(4){animation-delay:.45s}.s2 .wave i:nth-child(5){animation-delay:.6s}
 @keyframes wave{0%,100%{height:4px}50%{height:18px}}
 .s2 .controls{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);display:flex;gap:10px}
@@ -757,3 +757,19 @@ html,body{overflow-x:clip;max-width:100%}
 }
 @media (prefers-reduced-motion:reduce){.cal-grid span.pick,.s2 .wave i,.s2 .provider img,.msg,.steps button.on::after,.call-top .dot{animation:none}}
 @media (max-width:760px){.call{aspect-ratio:4/5}.cal{width:min(92%,340px)}}
+
+
+/* ---------- v3.7: silver-blue accent replaces green ---------- */
+.btn-primary{background:linear-gradient(135deg,#A9C6E0 0%,#6E9CC8 100%);color:var(--ink);box-shadow:0 10px 24px -12px rgba(110,156,200,.9);border-color:rgba(255,255,255,.5)}
+.btn-primary:hover{background:linear-gradient(135deg,#8FB4D6 0%,#4F82B5 100%);color:var(--ink)}
+.ico[data-hue="green"]{--c:#7FA9D0}
+.ico[data-hue="teal"]{--c:#7E9DB8}
+.report .pill,.cal-cta,.msg.out,.cal-grid span.pick{background:linear-gradient(135deg,#A9C6E0,#6E9CC8);color:var(--ink)}
+.rv .verified svg{fill:#6E9CC8}
+.call-top .dot{background:#A9C6E0;box-shadow:0 0 0 0 rgba(169,198,224,.7)}
+@keyframes live{to{box-shadow:0 0 0 10px rgba(169,198,224,0)}}
+.s2 .wave i{background:#A9C6E0}
+.steps button.on b,.stack-card:nth-child(2) .no{color:#6E9CC8}
+.pin.tele::before,.pin.tele::after{background:#7E9DB8}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:#6E9CC8;box-shadow:0 0 0 3px #E4EDF5}
+.check input{accent-color:#6E9CC8}
