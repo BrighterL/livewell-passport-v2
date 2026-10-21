@@ -654,12 +654,9 @@ html,body{overflow-x:clip;max-width:100%}
 .reviews h2{margin:0 0 .25rem}
 .reviews .lede{margin:0}
 @media (max-width:760px){.reviews-head{grid-template-columns:1fr}}
-.marquee{display:flex;gap:1rem;width:max-content;animation:marquee var(--dur,90s) linear infinite;padding-block:.5rem}
-.marquee.rev{animation-direction:reverse}
+.marquee{display:flex;gap:1rem;width:max-content;padding-block:.5rem;transform:translate3d(0,0,0)}
 .marquee-wrap{margin-inline:calc(-1 * var(--gutter)) calc(-1 * var(--gutter-r));overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
-.marquee-wrap:hover .marquee{animation-play-state:paused}
-@keyframes marquee{to{transform:translateX(-50%)}}
-@media (prefers-reduced-motion:reduce){.marquee{animation:none;width:auto;flex-wrap:wrap}}
+@media (prefers-reduced-motion:reduce){.marquee-wrap{overflow-x:auto;-webkit-mask:none;mask:none}}
 .rv{flex:0 0 340px;background:#fff;border:1px solid var(--line-2);border-radius:20px;padding:1.25rem 1.3rem;display:grid;gap:.75rem;position:relative;transform-style:preserve-3d;transition:transform 260ms var(--ease-out),box-shadow 260ms var(--ease-out)}
 .rv:hover{box-shadow:var(--shadow);transform:translateY(-4px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg))}
 .rv .who{display:grid;grid-template-columns:44px 1fr auto;gap:.75rem;align-items:center}

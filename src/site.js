@@ -79,6 +79,27 @@
     } else go(1);
   }
 
+  // Review rows: JS marquee that recycles cards, so no row is ever wider than the screen plus a few cards
+  if (!reduce) document.querySelectorAll('.marquee').forEach(function (row) {
+    var wrap = row.parentElement, speed = +row.dataset.speed || 34, rev = row.classList.contains('rev'), x = 0, last = null, paused = false, gap = 16;
+    // make sure the row is at least twice the viewport wide
+    var cards = Array.prototype.slice.call(row.children);
+    while (row.scrollWidth < wrap.clientWidth * 2 + 400) cards.forEach(function (c) { row.appendChild(c.cloneNode(true)); });
+    if (rev) { var w0 = row.lastElementChild.offsetWidth + gap; row.insertBefore(row.lastElementChild, row.firstElementChild); x = -w0; }
+    wrap.addEventListener('mouseenter', function () { paused = true; }); wrap.addEventListener('mouseleave', function () { paused = false; });
+    function frame(t) {
+      if (last === null) last = t; var dt = Math.min(50, t - last); last = t;
+      if (!paused) {
+        x += (rev ? 1 : -1) * speed * dt / 1000;
+        if (!rev) { var f = row.firstElementChild, fw = f.offsetWidth + gap; if (-x >= fw) { x += fw; row.appendChild(f); } }
+        else { if (x >= 0) { var l = row.lastElementChild; row.insertBefore(l, row.firstElementChild); x -= l.offsetWidth + gap; } }
+        row.style.transform = 'translate3d(' + x + 'px,0,0)';
+      }
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  });
+
   // Review cards tilt toward the cursor
   document.querySelectorAll('.rv').forEach(function (card) {
     card.addEventListener('mousemove', function (e) {

@@ -385,9 +385,9 @@ def reviews_section():
     </div>
   </div>
   <div class="wrap">
-    <div class="marquee-wrap"><div class="marquee" style="--dur:80s">{row1}{row1}</div></div>
-    <div class="marquee-wrap"><div class="marquee rev" style="--dur:95s">{row2}{row2}</div></div>
-    <div class="marquee-wrap"><div class="marquee" style="--dur:88s">{row3}{row3}</div></div>
+    <div class="marquee-wrap"><div class="marquee" data-speed="38">{row1}</div></div>
+    <div class="marquee-wrap"><div class="marquee rev" data-speed="30">{row2}</div></div>
+    <div class="marquee-wrap"><div class="marquee" data-speed="34">{row3}</div></div>
   </div>
 </section>'''
 
